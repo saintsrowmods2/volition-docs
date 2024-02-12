@@ -6,8 +6,8 @@ theme:
     primary: black
   features:
     - navigation.indexes
-plugins:
-  - privacy
+#plugins:   # Temporarily disabled as this fails on GH actions
+#  - privacy
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true

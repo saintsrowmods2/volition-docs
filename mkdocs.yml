@@ -6,3 +6,5 @@ theme:
     primary: black
   features:
     - navigation.indexes
+plugins:
+  - privacy

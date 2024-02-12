@@ -1,4 +1,6 @@
 # Pegfiles
+!!! note "Links"
+      ...
 
 Pegleg image format ⛵🏴‍☠️
 

@@ -1,6 +1,6 @@
 # Zone files
 
-??? Links
+!!! note "Links"
     - [Knobby | SR3 zone file format](https://www.saintsrowmods.com/forum/threads/sr3-zone-file-format.2855/)
     - [Kinzie's Toy Box | File Formats](https://github.com/saintsrowmods2/Kinzies-Toy-Box/blob/master/file_formats.md)
 
@@ -22,7 +22,7 @@ uint8 pad[16] - zero'd before write, padding so we can add to the header
 Reference data always follows the header. That data starts at reference_data_start offset from the top of the v_file_header and to get to the next reference(string) you just advance past the string. Double null termination on this string list, but the size is known as well.
 
 Immediately following the v_file_header is the world zone header:
-```cpp
+```cpp title="world_zone_header"
 // Header for zones
 struct world_zone_header {
     // 8 bytes 
@@ -49,6 +49,43 @@ struct world_zone_header {
 };
 
 ```
+
+??? info "enum zone_types"
+    ```cpp
+    // Types of zones
+    enum world_zone_types {
+    WZT_UNKNOWN = 0,
+    WZT_ALWAYS_LOADED,
+    WZT_STREAMING,
+    WZT_STREAMING_AL,
+    WZT_TEST_LEVEL,
+    WZT_MISSION,
+    WZT_ACTIVITY,
+    WZT_INTERIOR,
+    WZT_INTERIOR_AL,
+    WZT_TEST_LEVEL_AL,
+    WZT_MISSION_AL,
+    WZT_HIGH_LOD,
+    NUM_WORLD_ZONE_TYPES
+    };
+    ```
+    > [V] Knobby said:  
+    > Some information about these: We have 2 distinct types of worlds that we load in SR3/4. We have a test level, which is a single zone of arbitrary size and then we have a streaming level which is broken up into pieces. We also have a global always loaded(WZT_ALWAYS_LOADED) named after the world and then individual always loaded files for each zone(WZT_STREAMING_AL). Missions and activities have a big "zone" that is loaded when the mission or activity is active. They can also have an always loaded portion.
+
+??? quote "Position offsets"
+    > [V] Knobby said:  
+    >>    Quantum said:
+    >> The coordinates in the world zone mesh file references are of type "et_int16" (16 bit values). I am displaying them as integers, but is there a factor I can apply that will translate them to standard game coordinate units?
+    > 
+    > We use the following to get an absolute position. Since the position is inside the zone, we add the reference position to it to get world offset:
+    > 
+    >```cpp
+    > // transform of the instance
+    > fl_matrix43 transform;
+    > ref->m_transform.get(transform);
+    > transform.m_translation += header->m_file_reference_offset
+    >```
+
 
 In the zone file itself we find a chunked format. It is a series of sections of data each with a header that describes the content. A section header looks like this:
 ```cpp
@@ -144,3 +181,4 @@ type values are:
 ```
 
 fl_quaternion is a fancy want to compress data. It is a x, y, z, w float that represents a roation.
+

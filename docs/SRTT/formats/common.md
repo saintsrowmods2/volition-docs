@@ -1,6 +1,10 @@
 # Common
+!!! note "Links"
+    - [Kinzie's Toy Box | File Formats](https://github.com/saintsrowmods2/Kinzies-Toy-Box/blob/master/file_formats.md)
+
 
 ## v_file_header
+This header is slapped on quite a few, but not all files.
 ```cpp
 struct v_file_header
 {

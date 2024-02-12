@@ -1,13 +1,16 @@
 # Zone files
 
-https://www.saintsrowmods.com/forum/threads/sr3-zone-file-format.2855/
+??? Links
+    - [Knobby | SR3 zone file format](https://www.saintsrowmods.com/forum/threads/sr3-zone-file-format.2855/)
+    - [Kinzie's Toy Box | File Formats](https://github.com/saintsrowmods2/Kinzies-Toy-Box/blob/master/file_formats.md)
+
+___
 
 The zone file is split up into a header(czh file) and the zone data itself (czn file). We did this to save memory since we only need the header portion for building streaming containers and at load time. We load and then dump this header data.
 
-There is a v_file_header on top of the czh that describes the things that the zone references. This will be things like textures and meshes and they end up in the str2 file.
+There is a [`v_file_header`](/SRTT/formats/common/#v_file_header) on top of the czh that describes the things that the zone references. This will be things like textures and meshes and they end up in the str2 file.
 
-```cpp 
-v_file_header:
+```cpp title="v_file_header"
 uint16 signature - 0x3854
 uint16 version - 4
 uint32 reference_data_size
@@ -20,26 +23,41 @@ Reference data always follows the header. That data starts at reference_data_sta
 
 Immediately following the v_file_header is the world zone header:
 ```cpp
-uint32 signature - 'Z3RS'
-uint32 version - 29
-v_file_header *ptr - 8 bytes on PC, points back up into the v_file_header since we use that at load time to find filenames(saving some space)
-fl_vector file_reference_offset - applied to all file references to move them to this zone
-wz_file_reference *m_file_references
-uint16 num_file_references
-uint8 zone_type
-uint8 unused
-interior_trigger *ptr - run-time data
-uint16 number of triggers - run-time data
-uint16 extra objects - only used in test levels(not sure for what)
-uint8 pad[24] - zero'd before write, padding so we can add to the header
+// Header for zones
+struct world_zone_header {
+    // 8 bytes 
+    et_uint32   m_signature;   // 'Z3RS'
+    et_uint32   m_version;     // 29
+
+    // 4/8 bytes, 8 on PC, points back up into the v_file_header since we use that at load time to find filenames(saving some space)
+    const struct v_file_header *m_v_file_header;    // Filled in at load time, 
+
+    et_fl_vector        m_file_reference_offset;    // position offset to apply to all file refs
+
+    wz_file_reference   *m_file_references;     // Filled in at load time
+    et_uint16           m_num_file_references;  // number of file references
+
+    uint8               m_zone_type;    // type of zone
+    uint8               m_unused;       // pad previous to two bytes
+
+    wz_interior_trigger *m_interior_triggers;       // filled in at load time
+    et_uint16           m_num_interior_triggers;    // filled in at load time
+
+    uint16              m_extra_objects;  // only in test levels(not sure for what)
+
+    uint8               m_pad[24]; // Pad for future use, guaranteed to be zero'd
+};
+
 ```
 
 In the zone file itself we find a chunked format. It is a series of sections of data each with a header that describes the content. A section header looks like this:
-uint32 id - highest bit is a flag that tells us if the section has a gpu size. This flag is masked off after storing if the gpu size is to be expected.
-uint32 cpu size - cpu size of this section (does not include the header which is variable size)
-if (gpu flag set) {
-uint32 gpu_size
+```cpp
+struct zone_section {
+    et_uint32   m_id; // highest bit is a flag that tells us if the section has a gpu size. This flag is masked off after storing if the gpu size is to be expected.
+    et_uint32   m_cpu_size; // cpu size of this section (does not include the header which is variable size)
+    et_uint32   m_gpu_size; // if (gpu flag set
 }
+```
 
 ```cpp
 struct wz_file_reference {
@@ -54,6 +72,9 @@ et_int16 m_heading;
 et_uint16 m_str_offset;
 }
 
+```
+
+```cpp
 Section ids:
 0x2233 - crunched reference geometry - transforms and things for level meshes
 0x2234 - objects - nav points, environmental effects, and many, many more things
@@ -78,31 +99,36 @@ Section ids:
 0x2253 - cobject grid data - object fading
 0x2254 - ae rbb (??)
 0x2255 - havok pathfinding data(SR4 only?)
+```
 
-Object Section Data
+Object Section Data  
 Object header data on top:
-uint32 signature - 0x574F4246
-uint32 version - 5
-int32 num_objects
-int32 num_handles
-uint32 flags
-uint64 *handle list - run-time
-uint8 *object data - run-time
-uint32 object data size - run-time
+```cpp
+uint32  signature           // 0x574F4246
+uint32  version             // 5
+int32   num_objects
+int32   num_handles
+uint32  flags
+uint64  *handle list        // run-time
+uint8   *object data        // run-time
+uint32  object data size    // run-time
 ```
 
 Header is followed immediately by handle list(64 bit handles), which is followed by object data.
 
 The data is a series of property blocks:
 ```cpp
-uint32 *handle - offset on disk
-uint32 *parent handle - offset on disk
-uint32 object type hash
-uint16 number_of _properties
-uint16 buffer size
-uint16 name offset - offset into the property list for the name of the object
-uint16 padding
+uint32  *handle                 // offset on disk
+uint32  *parent handle          // offset on disk
+uint32  object type hash        
+uint16  number_of _properties
+uint16  buffer size
+uint16  name offset             // offset into the property list for the name of the object
+uint16  padding
+
+```
 rest of the data is the property list itself. This is different data for each object, but the property list is just:
+```cpp
 uint16 type
 uint16 size
 uint32 name crc
@@ -110,9 +136,11 @@ uint32 name crc
 followed by data. We store enumerations, flag data, strings, binary buffers, transforms, and other things in here and each object type looks for specific data based on that object.
 
 type values are:
+```cpp
 0 - string
 1 - data
 2 - compressed transform - pos only(fl_vector)
 3 - compressed transform with quaternion orient (fl_vector pos followed by fl_quaternion for orient)
+```
 
 fl_quaternion is a fancy want to compress data. It is a x, y, z, w float that represents a roation.

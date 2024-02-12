@@ -1,5 +1,8 @@
-# .chunk_pc
-
+# Chunkfiles
+!!! note "File extensions"
+    `.chunk_pc`
+    `.g_chunk_pc` 
+    
 ## Info
 
 The .chunk_pc file internally shares a lot of formats with other files.

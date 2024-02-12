@@ -1,1 +1,8 @@
-site_name: My Docs
+site_name: Volition File Docs
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: black
+  features:
+    - navigation.indexes

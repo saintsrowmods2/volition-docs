@@ -1,4 +1,8 @@
+# Pegfiles
 
+Pegleg image format ⛵🏴‍☠️
+
+https://www.saintsrowmods.com/forum/threads/peg-file-format.2908/
 
 ```cpp title="peg_header"
 struct VLIB_EXPORT peg_header {
@@ -82,6 +86,3 @@ struct peg_entry {
    BM_FORMAT_PC_A8,
 
 ```
-
-# Links
-- https://www.saintsrowmods.com/forum/threads/peg-file-format.2908/

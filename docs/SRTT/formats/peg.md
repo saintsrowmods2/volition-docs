@@ -1,4 +1,9 @@
 # Pegfiles
+!!! note inline end "File extensions"
+    `cvbm_pc`
+    `gvbm_pc`
+    `cpeg_pc`
+    `gpeg_pc`
 ??? note "Links"
     - https://www.saintsrowmods.com/forum/threads/peg-file-format.2908/
 ??? note "Tools"

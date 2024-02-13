@@ -5,7 +5,7 @@
     -
 ___
 
-cmesh and smesh share the same structure, called static_mesh (not confusing). The cpu file gets a [`v_file_header`](/SRTT/formats/common/#v_file_header), followed by:
+cmesh and smesh share the same structure, called static_mesh (not confusing). The cpu file gets a [`v_file_header`](../../SRTT/formats/common/#v_file_header), followed by:
 
  - static_mesh
  - Texture names

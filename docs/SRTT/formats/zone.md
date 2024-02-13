@@ -3,15 +3,15 @@
     `.czh_pc`
     `.czn_pc` 
 ??? note "Links"
-    - [Knobby | SR3 zone file format](https://www.saintsrowmods.com/forum/threads/sr3-zone-file-format.2855/)
+    - [[V] Knobby | SR3 zone file format](https://www.saintsrowmods.com/forum/threads/sr3-zone-file-format.2855/)
     - [Kinzie's Toy Box | File Formats](https://github.com/saintsrowmods2/Kinzies-Toy-Box/blob/master/file_formats.md)
 ??? note "Tools"
-    [`quantum_sr_zone_tools`](/tools/quantum_sr_zone_tools)
+    [`quantum_sr_zone_tools`](../../tools/quantum_sr_zone_tools)
 ___
 
 The zone file is split up into a header(czh file) and the zone data itself (czn file). We did this to save memory since we only need the header portion for building streaming containers and at load time. We load and then dump this header data.
 
-There is a [`v_file_header`](/SRTT/formats/common/#v_file_header) on top of the czh that describes the things that the zone references. This will be things like textures and meshes and they end up in the str2 file.
+There is a [`v_file_header`](../../SRTT/formats/common/#v_file_header) on top of the czh that describes the things that the zone references. This will be things like textures and meshes and they end up in the str2 file.
 
 ```cpp title="v_file_header"
 uint16 signature - 0x3854

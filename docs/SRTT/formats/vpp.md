@@ -1,7 +1,11 @@
-https://www.saintsrowmods.com/forum/threads/asm-and-vpp-file-formats.8448/
-
-
 # Packfiles and ASM
+
+
+??? note "Links"
+    - https://www.saintsrowmods.com/forum/threads/asm-and-vpp-file-formats.8448/
+??? end "Tools"
+    minimauls tools
+___
 
 ## Packfile
 Packfiles consist of a big header on top followed by invdividual entries. The header is actually different pieces aligned to 2048 bytes for historical cd drive reasons. We start with the v_packfile structure itself followed by the directory(v_packfile_entries) and that is followed by the filename list. We convert the pointers to offsets into the filename pool when writing to disk.

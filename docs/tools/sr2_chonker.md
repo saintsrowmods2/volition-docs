@@ -1,12 +1,14 @@
 # SR2 Chonker
 
 !!! note inline end ""
-    #### Links
+    __Links__
     [`Forum Post`](https://www.saintsrowmods.com/forum/threads/a-map-editor.19960/)
     [`GitHub`](https://github.com/sevonj/sr2_chonker)
-    #### Games
+    
+    __Games__
     `SR2`
-    #### File formats
+    
+    __File formats__
     `.chunk_pc`
     `.g_chunk_pc` 
     

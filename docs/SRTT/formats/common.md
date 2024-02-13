@@ -1,5 +1,5 @@
 # Common
-!!! note "Links"
+??? note "Links"
     - [Kinzie's Toy Box | File Formats](https://github.com/saintsrowmods2/Kinzies-Toy-Box/blob/master/file_formats.md)
 
 

@@ -1,11 +1,13 @@
 # SR2 PegTool
 
 !!! note inline end ""
-    #### Links
+    __Links__
     [`Forum Post`](https://www.saintsrowmods.com/forum/threads/saints-row-2-peg-texture-tool.8687/)
-    #### Games
+
+    __Games__
     `SR2`
-    #### File formats
+    
+    __File formats__
     `.peg_pc`
     `.g_peg_pc`
 

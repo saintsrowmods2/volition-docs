@@ -1,9 +1,11 @@
 # Zone files
-
+!!! note inline end "File extensions"
+    `.czh_pc`
+    `.czn_pc` 
 ??? note "Links"
     - [Knobby | SR3 zone file format](https://www.saintsrowmods.com/forum/threads/sr3-zone-file-format.2855/)
     - [Kinzie's Toy Box | File Formats](https://github.com/saintsrowmods2/Kinzies-Toy-Box/blob/master/file_formats.md)
-!!! end "Tools"
+??? note "Tools"
     [`quantum_sr_zone_tools`](/tools/quantum_sr_zone_tools)
 ___
 

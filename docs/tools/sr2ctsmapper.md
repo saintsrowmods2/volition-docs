@@ -1,11 +1,13 @@
 # SR2 CTS Mapper
 
 !!! note inline end ""
-    #### Links
+    __Links__
     [`Forum Post`](https://www.saintsrowmods.com/forum/threads/saints-row-2-cts-mapper.9868/)
-    #### Games
+
+    __Games__
     `SR2`
-    #### File formats
+    
+    __File formats__
     `.cts`
 
     

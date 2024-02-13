@@ -1,11 +1,13 @@
 # SR2 ChunksTextureTool
 
 !!! note inline end ""
-    #### Links
+    __Links__
     [`Forum Post`](https://www.saintsrowmods.com/forum/threads/saints-row-2-chunks-texture-tool.12877/)
-    #### Games
+   
+    __Games__
     `SR2`
-    #### File formats
+    
+    __File formats__
     `.peg_pc`
     `.g_peg_pc`
     `.chunk_pc`

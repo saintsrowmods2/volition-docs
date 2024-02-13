@@ -1,10 +1,12 @@
 # Pegfiles
-!!! note "Links"
-      ...
+??? note "Links"
+    - https://www.saintsrowmods.com/forum/threads/peg-file-format.2908/
+??? note "Tools"
+    -
+___
 
 Pegleg image format ⛵🏴‍☠️
 
-https://www.saintsrowmods.com/forum/threads/peg-file-format.2908/
 
 ```cpp title="peg_header"
 struct VLIB_EXPORT peg_header {

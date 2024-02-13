@@ -1,13 +1,15 @@
 # quantum_sr_zone_tools
 
 !!! note inline end ""
-    #### Links
+    __Links__
     [`Forum Post`](https://www.saintsrowmods.com/forum/threads/saints-row-3-and-4-zone-file-tools.12631/)
     [`GitHub`](https://github.com/clarosa/SRZoneTools)
-    #### Games
+    
+    __Games__
     `SRTT`
     `SRIV`
-    #### File formats
+
+    __File formats__
     `.czh_pc`
     `.czn_pc`
 

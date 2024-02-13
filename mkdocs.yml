@@ -1,4 +1,5 @@
 site_name: Volition File Docs
+site_url: https://saintsrowmods2.github.io/volition-docs/
 theme:
   name: material
   palette:

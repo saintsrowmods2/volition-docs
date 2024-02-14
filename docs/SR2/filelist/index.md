@@ -1,5 +1,6 @@
 # File list
 
+## Top Level
 ```
 Saints Row 2
 ├── anims.vpp_pc

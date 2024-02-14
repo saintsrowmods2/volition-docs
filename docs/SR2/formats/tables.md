@@ -6,3 +6,8 @@
 * One item per line, contained within double quotes
 * `CRLF` line endings
 * Last line contains `#End` with no double quotes
+
+
+# XML tables
+!!! note "File extensions"
+    `.xtbl`

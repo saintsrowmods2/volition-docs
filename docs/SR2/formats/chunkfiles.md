@@ -13,10 +13,11 @@ The .chunk_pc file internally shares a lot of formats with other files.
   
     ---
     - Materials
-    - World models
-    - World collision
-    - Object spawns
-    - Light sources    
+    - Static Objects
+    - Object models
+    - Baked world collision
+    - Light sources
+    -   
 
 - __Not yet found but expected:__
   
@@ -25,7 +26,21 @@ The .chunk_pc file internally shares a lot of formats with other files.
 
 
 </div>
-  
+
+## GPU Models
+Every visible model is in the g_chunk file. The format for static models is figured out.
+
+## CPU Models
+The chunk_pc file itself contains models too, with no UV's or other extra data. Labeled as physmodels, since they're probably collision for loose objects.
+
+## Objects
+For some reason the objects is split into two structs, located very far apart in the file.
+
+
+
+## World Collision
+Collision for all static objects in a chunk seem to be baked into one Havok collision blob. Look up Havok MOPP for some info from other mod scenes, though there isn't much.
+
 ## .chunk_pc Layout
 
 ### Header

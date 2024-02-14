@@ -4,4 +4,5 @@ The intention here is to collect all knowledge of file formats used in Volition 
 
 Read it online at the [GH pages](https://saintsrowmods2.github.io/volition-docs/), or download the repo and view it offline using MkDocs.
 
-Project coordination: https://github.com/orgs/saintsrowmods2/projects/1
+# Contribution
+Project: https://github.com/orgs/saintsrowmods2/projects/1

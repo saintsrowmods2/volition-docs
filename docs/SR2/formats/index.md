@@ -42,3 +42,41 @@
     `.vcomp_pc`
     `.vint_proj`
     `.vso_pc`
+
+## Other file extensions
+
+* .anim_list—plaintext file list
+* .anim_pc
+* .bik—Bink video
+* bitmaps_pc
+* .cpose
+* .csc_pc
+* .effect_pc
+* .engine_foley
+* .fxo_pc—disassembly tool source code available [here](https://www.saintsrowmods.com/forum/threads/sr3-shader-dumper.1264/)
+* .g_effect_pc
+* .g_spt_pc
+* .g_vcomp_pc
+* .hmap_pc
+* .idx_map
+* .le_strings
+* .mms—just a CSV file with a different extension
+* .morph_pc
+* .ods
+* .pcm_pc
+* .pso_pc
+* .rig_pc
+* shaders_pc—plaintext file list
+* .sim_pc
+* .spt_pc
+* .tag_pc
+* .vcomp_pc
+* voice_pc
+* .vf3_pc
+* .vint_doc
+* .vint_proj
+* .vint_xdoc
+* .vso_pc
+* .xgs—Xaudio global settings
+* .xsb—Xaudio sound bank
+* .xwb—Xaudio wave bank

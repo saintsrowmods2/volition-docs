@@ -51,7 +51,7 @@
 * [patch.vpp_pc](patch.vpp_pc)
 * [pegs.vpp_pc](pegs.vpp_pc)
 * preload_anim.tbl
-* preload.tbl
+* [preload.tbl](preload.tbl)
 * saferun.sh—*Linux only*
 * saintsrow2—*Linux only*
 * saintsrow2.i386—*Linux only*

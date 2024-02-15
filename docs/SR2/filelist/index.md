@@ -9,9 +9,6 @@
 * [chunks4.vpp_pc](chunks4.vpp_pc)
 * [city_load.vpp_pc](city_load.vpp_pc)
 * [common.vpp_pc](common.vpp_pc)
-* CrashReporter—*Linux only*
-* CrashReporter.i386—*Linux only*
-* CrashReporter.x86_64—*Linux only*
 * [cutscenes.vpp_pc](cutscenes.vpp_pc)
 * data/
 	* DFEngine/

@@ -9,9 +9,6 @@
 * [chunks4.vpp_pc](chunks4.vpp_pc)
 * [city_load.vpp_pc](city_load.vpp_pc)
 * [common.vpp_pc](common.vpp_pc)
-* CrashReporter—*Linux only*
-* CrashReporter.i386—*Linux only*
-* CrashReporter.x86_64—*Linux only*
 * [cutscenes.vpp_pc](cutscenes.vpp_pc)
 * data/
 	* DFEngine/
@@ -26,9 +23,6 @@
 	        * objects.dfo
         * engine.var
 * [hmaps.vpp_pc](hmaps.vpp_pc)
-* icon.png—*Linux only*
-* icudt52l.dat—*Linux only*
-* legal/—*Linux only*
     * freetype.txt
 	* glew.txt
 	* HLSLCrossCompiler.txt
@@ -39,10 +33,6 @@
 	* licenses.txt
 	* TomsFastMath.txt
 	* zlib.txt
-* libavcodec-eon_full.so.56—*Linux only*
-* libavformat-eon_full.so.56—*Linux only*
-* libavutil-eon_full.so.54—*Linux only*
-* libopenal-eon.so.1—*Linux only*
 * [meshes.vpp_pc](meshes.vpp_pc)
 * [music1.vpp_pc](music1.vpp_pc)
 * [music2.vpp_pc](music2.vpp_pc)
@@ -52,11 +42,6 @@
 * [pegs.vpp_pc](pegs.vpp_pc)
 * preload_anim.tbl
 * [preload.tbl](preload.tbl)
-* saferun.sh—*Linux only*
-* saintsrow2—*Linux only*
-* saintsrow2.i386—*Linux only*
-* saintsrow2.vpfs—*Linux only*
-* SDLGamepad.config—*Linux only*
 * shaders/
 	* 2d_notex.vso_pc
 	* 2d_tex.vso_pc
@@ -76,7 +61,6 @@
 	* transform_notex.vso_pc
 	* transform_tex.vso_pc
 * shaders_pc
-* steam_appid.txt—*Steam only*
 * [textures.vpp_pc](textures.vpp_pc)
 * videos/
 	* br08-01-screen.bik

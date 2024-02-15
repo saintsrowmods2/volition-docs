@@ -9,7 +9,7 @@
 | Cloth sim     | `.sim_pc`                                           | Cloth simulation file                |                                                                                                      |
 | Coordinate    | `.cts`                                              |                                      | [`SR2_CTS_Mapper`](../../tools/sr2ctsmapper)                                                         |
 | Cutscene      | `.csc_pc`                                           |                                      |                                                                                                      |
-| Effect        | `.effect_pc` `.g_effect_pc`                         | Volition font file                   |                                                                                                      |
+| Effect        | `.effect_pc` `.g_effect_pc`                         |                                      |                                                                                                      |
 | Font          | `.vf3_pc`                                           | Volition font file                   |                                                                                                      |
 | Lua Script    | `.lua`                                              |                                      |                                                                                                      |
 | Meshes        | `.smesh_pc` `.g_smesh_pc` `.cmesh_pc` `.g_cmesh_pc` |                                      | [`cmesh2obj`](../../tools/cmesh2obj)                                                                 |

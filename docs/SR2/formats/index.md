@@ -18,12 +18,11 @@
 | Pegfile       | `.peg_pc` `.g_peg_pc`                               | Textures                             | [`SR2_PegTool`](../../tools/sr2pegtool) [`SR2_ChunksTextureTool`](../../tools/sr2chunkstexturetool)  |
 | Shader        | `.fxo_pc` `.pso_pc`                                 |                                      |                                                                                                      |
 | String file   | `.le_strings`                                       | Text.                                |                                                                                                      |
-| Table         | `.tbl`                                              |                                      |                                                                                                      |
+| Table         | `.tbl` `.xtbl`                                      |                                      |                                                                                                      |
 | UI            | `.vint_doc` `.vint_xdoc`                            | Volition UI file, UI XML             |                                                                                                      |
 | Vehicle       | `.car_pc` `.g_car_pc`                               |                                      | [`cmesh2obj`](../../tools/cmesh2obj)                                                                 |
 | Vehicle Table | `.cvtf`                                             | Crunched Vehicle Table file          |                                                                                                      |
 | Video         | `.bik`                                              | Bink Video                           |                                                                                                      |
-| XML Table     | `.xtbl`                                             |                                      |                                                                                                      |
 
 ??? "TODO"
     `.spt_pc`

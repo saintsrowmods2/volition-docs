@@ -9,6 +9,9 @@
 * [chunks4.vpp_pc](chunks4.vpp_pc)
 * [city_load.vpp_pc](city_load.vpp_pc)
 * [common.vpp_pc](common.vpp_pc)
+* CrashReporter—*Linux only*
+* CrashReporter.i386—*Linux only*
+* CrashReporter.x86_64—*Linux only*
 * [cutscenes.vpp_pc](cutscenes.vpp_pc)
 * data/
 	* DFEngine/
@@ -23,16 +26,6 @@
 	        * objects.dfo
         * engine.var
 * [hmaps.vpp_pc](hmaps.vpp_pc)
-    * freetype.txt
-	* glew.txt
-	* HLSLCrossCompiler.txt
-	* ICU License - ICU 1.8.1 and later.html
-	* LGPL v2.txt
-	* libcurl.txt
-	* LibTomCrypt.txt
-	* licenses.txt
-	* TomsFastMath.txt
-	* zlib.txt
 * [meshes.vpp_pc](meshes.vpp_pc)
 * [music1.vpp_pc](music1.vpp_pc)
 * [music2.vpp_pc](music2.vpp_pc)

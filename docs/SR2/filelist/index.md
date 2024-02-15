@@ -23,16 +23,6 @@
 	        * objects.dfo
         * engine.var
 * [hmaps.vpp_pc](hmaps.vpp_pc)
-    * freetype.txt
-	* glew.txt
-	* HLSLCrossCompiler.txt
-	* ICU License - ICU 1.8.1 and later.html
-	* LGPL v2.txt
-	* libcurl.txt
-	* LibTomCrypt.txt
-	* licenses.txt
-	* TomsFastMath.txt
-	* zlib.txt
 * [meshes.vpp_pc](meshes.vpp_pc)
 * [music1.vpp_pc](music1.vpp_pc)
 * [music2.vpp_pc](music2.vpp_pc)

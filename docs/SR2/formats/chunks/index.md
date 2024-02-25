@@ -1,4 +1,4 @@
-# Chunkfiles
+# Chunks
 !!! note "File extensions"
     `.chunk_pc`
     `.g_chunk_pc` 
@@ -105,5 +105,3 @@ char        texture_names[num_textures];//
 <alignment padding 16>                  //
 
 ```
-
-## .g_chunk_pc layout

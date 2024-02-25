@@ -4,7 +4,7 @@
 | ------------- | --------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------- |
 | Animation     | `.anim_pc` `.rig_pc`                                |                                      |                                                                                                      |
 | Audio         | `.xsb` `.xwb` `xgs`                                 | XACT Sound Bank, Wave Bank, Settings |                                                                                                      |
-| Chunkfile     | `.chunk_pc` `.g_chunk_pc`                           | World data                           | [`SR2_Chonker`](../../tools/sr2_chonker) [`SR2_ChunksTextureTool`](../../tools/sr2chunkstexturetool) |
+| Chunks        | `.chunk_pc` `.g_chunk_pc`                           | World data                           | [`SR2_Chonker`](../../tools/sr2_chonker) [`SR2_ChunksTextureTool`](../../tools/sr2chunkstexturetool) |
 | Cityfile      | `.city_pc`                                          | Chunk directory                      |                                                                                                      |
 | Cloth sim     | `.sim_pc`                                           | Cloth simulation file                |                                                                                                      |
 | Coordinate    | `.cts`                                              |                                      | [`SR2_CTS_Mapper`](../../tools/sr2ctsmapper)                                                         |

@@ -1,0 +1,2276 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://saintsrowmods2.github.io/volition-docs/SR2/formats/cts/">
+      
+      
+        <link rel="prev" href="../cityfiles/">
+      
+      
+        <link rel="next" href="../cvtf/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>CTS - Volition File Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Volition File Docs" class="md-header__button md-logo" aria-label="Volition File Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Volition File Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CTS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Volition File Docs" class="md-nav__button md-logo" aria-label="Volition File Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Volition File Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">SR2</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="SR2" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          SR2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../filelist/">Filelist</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Filelist" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Filelist
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/anims.vpp_pc/" class="md-nav__link">
+        anims.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/audio.vpp_pc/" class="md-nav__link">
+        audio.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/chunks1.vpp_pc/" class="md-nav__link">
+        chunks1.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/chunks2.vpp_pc/" class="md-nav__link">
+        chunks2.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/chunks3.vpp_pc/" class="md-nav__link">
+        chunks3.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/chunks4.vpp_pc/" class="md-nav__link">
+        chunks4.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/city_load.vpp_pc/" class="md-nav__link">
+        city_load.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/common.vpp_pc/" class="md-nav__link">
+        common.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/cutscenes.vpp_pc/" class="md-nav__link">
+        cutscenes.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/hmaps.vpp_pc/" class="md-nav__link">
+        hmaps.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/meshes.vpp_pc/" class="md-nav__link">
+        meshes.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/music1.vpp_pc/" class="md-nav__link">
+        music1.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/music2.vpp_pc/" class="md-nav__link">
+        music2.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/music3.vpp_pc/" class="md-nav__link">
+        music3.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/music4.vpp_pc/" class="md-nav__link">
+        music4.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/patch.vpp_pc/" class="md-nav__link">
+        patch.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/pegs.vpp_pc/" class="md-nav__link">
+        pegs.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/preload.tbl/" class="md-nav__link">
+        preload.tbl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/textures.vpp_pc/" class="md-nav__link">
+        textures.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Formats</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Formats" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Formats
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cityfiles/" class="md-nav__link">
+        Cityfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        CTS
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cvtf/" class="md-nav__link">
+        Vehicle Table
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packfiles/" class="md-nav__link">
+        Packfiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pegfiles/" class="md-nav__link">
+        Pegfiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables/" class="md-nav__link">
+        Tables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vehicle/" class="md-nav__link">
+        Vehicles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3_9" type="checkbox" id="__nav_2_3_9" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../chunks/">Chunks</a>
+          
+            <label for="__nav_2_3_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Chunks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          Chunks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chunks/g_chunk_pc/" class="md-nav__link">
+        g_chunk_pc
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3_10" type="checkbox" id="__nav_2_3_10" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../meshes/">Meshes</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Meshes" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_10">
+          <span class="md-nav__icon md-icon"></span>
+          Meshes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../lua/">Lua</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Lua" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Lua
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          SRIV
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SRIV" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          SRIV
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" tabindex="0" aria-expanded="false">
+          Formats
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Formats" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Formats
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRIV/formats/anim/" class="md-nav__link">
+        Animation Formats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRIV/formats/meshes/" class="md-nav__link">
+        Mesh Formats
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          SRTT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SRTT" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          SRTT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../SRTT/formats/">Formats</a>
+          
+            <label for="__nav_4_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Formats" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Formats
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/anim/" class="md-nav__link">
+        Animation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/common/" class="md-nav__link">
+        Common
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/meshes/" class="md-nav__link">
+        Meshes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/peg/" class="md-nav__link">
+        Pegfiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/vpp/" class="md-nav__link">
+        Packfiles and ASM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/zone/" class="md-nav__link">
+        Zone files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../SRTT/lua/">Lua</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Lua" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Lua
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/cmesh2obj/" class="md-nav__link">
+        cmesh2obj
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/minimauls_tools/" class="md-nav__link">
+        Minimaul's tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/quantum_sr_zone_tools/" class="md-nav__link">
+        quantum_sr_zone_tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/sr2_chonker/" class="md-nav__link">
+        SR2 Chonker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/sr2chunkstexturetool/" class="md-nav__link">
+        SR2 ChunksTextureTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/sr2ctsmapper/" class="md-nav__link">
+        SR2 CTS Mapper
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/sr2pegtool/" class="md-nav__link">
+        SR2 PegTool
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cts">CTS</h1>
+<div class="admonition note">
+<p class="admonition-title">File extensions</p>
+<p><code>.cts</code></p>
+</div>
+<h1 id="format">Format</h1>
+<p>CTS files are plaintext files, where each variable is on its own line and variable names are separated from values by colons, except for booleans, where the presence of the attribute name usually marks a truthy value. Sometimes they're explicitly set to true; otherwise, its name may or may not be followed by a colon.</p>
+<p>CTS files are divided into numerous sections, most of which are always present but empty. Each section has a heading such as:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>// -------
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>#Ambients
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>// -------
+</span></code></pre></div>
+<p>Comments are marked by two <code>//</code> as in C; there are some commented out objects, as well as the lines either side of the section headings.</p>
+<p>Each object within these sections is usually divided by one or more empty lines. There are exceptions to this, so it should not be relied upon.</p>
+<p>An example object may look like this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$Ambient:   &quot;amb_sr2_mp_custbg_RT&quot;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    $Navpoint:  &quot;amb_sr2_mp_custbg_RT&quot;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    $Shape: &quot;Box&quot;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        $Inner Dimensions:  &lt;75.625000 51 19&gt;
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        $Outer Dimensions:  &lt;75.750000 84.875000 52.500000&gt;
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    $Inner Offset:  &lt;0 0 0&gt;
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    $Attachment Type:   &quot;None&quot;
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    $Emitter:   &quot;list_0&quot;
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        $Volume:    0.1750
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        $Priority:  0.7700
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        $Min Delay: 0
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        $Max Delay: 0
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        $Min ToD:   0
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        $Max ToD:   0
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        $ToD Fade In:   0
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        $ToD Fade Out:  0
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        $Play Type: &quot;In Order&quot;
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        +File:  &quot;amb_int_room_med_1&quot;
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    $Emitter:   &quot;radio&quot;
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        $Volume:    0.5000
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>        $Priority:  0.0000
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>        $Radio: &quot;MP_Customization&quot;
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        $Min ToD:   0
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>        $Max ToD:   0
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>        $ToD Fade In:   0
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>        $ToD Fade Out:  0
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>    +Masked
+</span></code></pre></div>
+<p>Required fields tend to be prefixed with a <code>$</code> and optional fields with a <code>+</code>, but this does not appear to be consistent/rigidly enforced.</p>
+<p>Indentation indicates nesting, although top-level fields are not always indented, e.g.:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$Navpoint:  &quot;parking_spots_$parking_006&quot;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$Type:      &quot;ground&quot;
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>$Pos:           &lt;43.250015 -3.999002 70.702995&gt;
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>$Orient:        [0.695712]
+</span></code></pre></div>
+<p>The same key can be repeated multiple times to build up an array.</p>
+<p>All sections and fields are always in the same order. Where possible, this order is retained throughout this page. As some fields never coexist, it is unlikely that section and variable  order on this page is exactly the same as within the SR2 engine, and as such it should not be relied on.</p>
+<p>The end of each file is marked by an <code>#End</code>.</p>
+<h1 id="coordinates">Coordinates</h1>
+<p>Coordinates are represented as <code>&lt;x z y&gt;</code>; units are approximately metres and increasing Z will cause things to go up.</p>
+<h1 id="arrays">Arrays</h1>
+<p>Array elements are whitespace separated, e.g.:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$Dimensions:        6.00 2.50
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>$Box size:      -2.000000 0.000000 -2.000000 2.000000 2.000000 2.000000
+</span></code></pre></div>
+<h1 id="orient">$Orient</h1>
+<p>Multiple sections contain <code>$Orient</code> fields. These can all accept any of these formats:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$Orient:        [&lt;0.268345 0 -0.963323&gt; &lt;0.253293 0.964813 0.070558&gt; &lt;0.929427 -0.262937 0.258903&gt;]
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>$Orient:        [-1.617962]
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>$Orient:        [I]
+</span></code></pre></div>
+<h1 id="sections">Sections</h1>
+<h2 id="includes">Includes</h2>
+<p>List of strings.</p>
+<h3 id="example">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>// -------
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>#Includes
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>// -------
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>$Include: &quot;amb_sr2_mp_gb_ct.cts&quot;
+</span></code></pre></div>
+<h2 id="activities">Activities</h2>
+<p>List of strings.</p>
+<h3 id="example_1">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>// -------
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>#Activities
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>// -------
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>$Activity:              &quot;mp_museum2_racing&quot;
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>$Activity:              &quot;mp_museum2_fraud&quot;
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>$Activity:              &quot;mp_museum2_trafficking&quot;
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>$Activity:              &quot;mp_museum2_snatch&quot;
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>$Activity:              &quot;mp_museum2_derby&quot;
+</span></code></pre></div>
+<h2 id="framerates">Framerates</h2>
+<p>List of strings.</p>
+<h3 id="example_2">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>// -------
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>#Framerates
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>// -------
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>$Framerate:             &quot;fr_checkai&quot;
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>$Framerate:             &quot;fr_checkap&quot;
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>$Framerate:             &quot;fr_checkar&quot;
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>$Framerate:             &quot;fr_checkba&quot;
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>$Framerate:             &quot;fr_checkct&quot;
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>$Framerate:             &quot;fr_checkdk&quot;
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>$Framerate:             &quot;fr_checkdt&quot;
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>$Framerate:             &quot;fr_checkfa&quot;
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>$Framerate:             &quot;fr_checkhe&quot;
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>$Framerate:             &quot;fr_checkma&quot;
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>$Framerate:             &quot;fr_checkmu&quot;
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>$Framerate:             &quot;fr_checkpr&quot;
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>$Framerate:             &quot;fr_checkse&quot;
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>$Framerate:             &quot;fr_checksr&quot;
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>$Framerate:             &quot;fr_checksu&quot;
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>$Framerate:             &quot;fr_checkty&quot;
+</span></code></pre></div>
+<h2 id="groups">Groups</h2>
+<p>List of strings.</p>
+<h3 id="example_3">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>// -------
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>#Groups
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>// -------
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>$Group: &quot;sr2_mp_sa_museum2_$Group_items&quot;
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>$Group: &quot;sr2_mp_sa_museum2_$Mission_police_npcs_1&quot;
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>$Group: &quot;sr2_mp_sa_museum2_$Mission_police_cars_1&quot;
+</span></code></pre></div>
+<h2 id="navpoints">Navpoints</h2>
+<ul>
+<li><strong>$Navpoint</strong>—string</li>
+<li><strong>$Type</strong>—string; can be "floating" or "ground"</li>
+<li><strong>$Pos</strong>—vec3 co-ordinates</li>
+<li><strong>$Orient</strong>—see <a href="#orient">above notes</a></li>
+<li><strong>$Object</strong>—string and int, whitespace separated</li>
+<li><strong>$Object Pos</strong>—vec3 co-ordinates</li>
+<li><strong>$Object Orient</strong>—see <a href="#orient">above notes</a></li>
+<li><strong>+Extra Line</strong>—string</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$Navpoint:  &quot;shops_sr2_city_$MU_bike_cam1&quot;
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>$Type:      &quot;floating&quot;
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>$Pos:           &lt;-1200.445435 13.532857 -1660.630859&gt;
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>$Orient:        [&lt;0.268345 0 -0.963323&gt; &lt;0.253293 0.964813 0.070558&gt; &lt;0.929427 -0.262937 0.258903&gt;]
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>$Navpoint:  &quot;shops_sr2_city_$SU_ice_clerk&quot;
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>$Type:      &quot;ground&quot;
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>$Pos:           &lt;155.212326 21.517338 -1553.706787&gt;
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>$Orient:        [-1.617962]
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>$Navpoint:  &quot;shops_sr2_city_$MU_bike_store&quot;
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>$Type:      &quot;ground&quot;
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>$Pos:           &lt;-1192.252686 9.809165 -1661.261353&gt;
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>$Orient:        [I]
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>$Navpoint:  &quot;amb_sr2_mp_gb_ct_INT_donniechop_fridge&quot;
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>$Type:      &quot;floating&quot;
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>$Pos:           &lt;293.624207 -3.108146 323.680725&gt;
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>$Orient:        [I]
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>    $Object:    &quot;CSCT_refrigeratorA01&quot;  315
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>    $Object Pos:    &lt;294.146545 -2.912549 323.729218&gt;
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>    $Object Orient: [-3.138468]
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>$Navpoint:  &quot;mp_marina_racing_$bonus2 (3)&quot;
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>$Type:      &quot;ground&quot;
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>$Pos:           &lt;-520.076477 5.100128 -2093.813232&gt;
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>$Orient:        [I]
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>+Extra Line:    &quot;4&quot;
+</span></code></pre></div>
+<h2 id="paths">Paths</h2>
+<ul>
+<li><strong>$Path</strong>—string</li>
+<li><strong>$Type</strong>—string; can be "floating" or "ground"</li>
+<li><strong>$Nav</strong>—string array; list of navpoint names</li>
+</ul>
+<h3 id="example_4">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$Path:  &quot;mp_ct_racing_$path000&quot;
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>$Type:  &quot;ground&quot;
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    $Nav:   &quot;mp_ct_racing_$n001&quot;
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    $Nav:   &quot;mp_ct_racing_$n000&quot;
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    $Nav:   &quot;mp_ct_racing_$n002&quot;
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    $Nav:   &quot;mp_ct_racing_$n003&quot;
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    $Nav:   &quot;mp_ct_racing_$n004&quot;
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    $Nav:   &quot;mp_ct_racing_$n005&quot;
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    $Nav:   &quot;mp_ct_racing_$n006&quot;
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>    $Nav:   &quot;mp_ct_racing_$n008&quot;
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    $Nav:   &quot;mp_ct_racing_$n009&quot;
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    $Nav:   &quot;mp_ct_racing_$n010&quot;
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>    $Nav:   &quot;mp_ct_racing_$n011&quot;
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>    $Nav:   &quot;mp_ct_racing_$n012&quot;
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>    $Nav:   &quot;mp_ct_racing_$n013&quot;
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>    $Nav:   &quot;mp_ct_racing_$n014&quot;
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>    $Nav:   &quot;mp_ct_racing_$n016&quot;
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>    $Nav:   &quot;mp_ct_racing_$n017&quot;
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>    $Nav:   &quot;mp_ct_racing_$n018&quot;
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>    $Nav:   &quot;mp_ct_racing_$n019&quot;
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>    $Nav:   &quot;mp_ct_racing_$n020&quot;
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>    $Nav:   &quot;mp_ct_racing_$n022&quot;
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>    $Nav:   &quot;mp_ct_racing_$n023&quot;
+</span></code></pre></div>
+<h2 id="cameras">Cameras</h2>
+<p>This section is always empty when present.</p>
+<h2 id="items">Items</h2>
+<ul>
+<li><strong>$Item</strong>—string</li>
+<li><strong>$Item type</strong>—string</li>
+<li><strong>$Start nav</strong>—string; navpoint name</li>
+<li><strong>$Respawn</strong>—boolean</li>
+<li><strong>$Respawn Delay</strong>—integer</li>
+<li><strong>$Ammo</strong>—integer</li>
+<li><strong>$Grenade Ammo</strong>—integer</li>
+<li><strong>$Player_Unwieldable</strong>—boolean</li>
+<li><strong>$Group</strong>—string</li>
+</ul>
+<h3 id="examples_1">Examples</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$Item:      &quot;ss08_$Drug_Box_01&quot;
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>$Item type: &quot;BoxCokeB&quot;
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>$Start nav: &quot;ss08_$Drug_Box_01&quot;
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>$Player_Unwieldable: true
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>$Group:         &quot;ss08_$Drug_Boxes&quot;
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>$Item:      &quot;ss06_$HQ_Gun&quot;
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>$Item type: &quot;beretta&quot;
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>$Start nav: &quot;ss06_$HQ_Gun&quot;
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>$Respawn:   true
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>$Respawn Delay: 5000
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>$Ammo:  12
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>$Grenade Ammo:  0
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>$Group:         &quot;ss06_$HQ_Gun_Spawn&quot;
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>$Item:      &quot;sr2_mp_gb_ct_$i020 (6)&quot;
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>$Item type: &quot;magnum&quot;
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>$Start nav: &quot;sr2_mp_gb_ct_$i020 (6)&quot;
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>$Respawn:   true
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>$Grenade Ammo:  0
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>$Group:         &quot;sr2_mp_gb_ct_$Group_items&quot;
+</span></code></pre></div>
+<h2 id="triggers">Triggers</h2>
+<ul>
+<li><strong>$Trigger</strong>—string</li>
+<li><strong>$Trigger type</strong>—string, can be "bounding box", "sphere" or "cylinder"</li>
+<li><strong>$Trigger action</strong>—string; see below for possible options</li>
+<li><strong>$Trigger max fires</strong>—integer</li>
+<li><strong>$Trigger delay</strong>—integer</li>
+<li><strong>$Start nav</strong>—string; navpoint name</li>
+<li><strong>+DemoDisabled</strong>—boolean</li>
+<li><strong>+Disabled</strong>—boolean</li>
+<li><strong>+UseActivated</strong>—boolean</li>
+<li><strong>+UseMessage</strong>—string</li>
+<li><strong>+CheckNPCs</strong>—boolean</li>
+<li><strong>$Sphere radius</strong>—float</li>
+<li><strong>$Box size</strong>--float[6]</li>
+<li><strong>$Cylinder size</strong>--float[2]</li>
+<li><strong>+Masked</strong>—boolean</li>
+<li><strong>+Ignore Vehicles</strong>—boolean</li>
+<li><strong>+Ignore On Foot</strong>—boolean</li>
+<li><strong>+Warp Nav</strong>—string; navpoint name</li>
+<li><strong>+Audio Line</strong>—string</li>
+</ul>
+<h3 id="trigger-actions-options">Trigger actions options</h3>
+<ul>
+<li>callback</li>
+<li>multiplayer_crib</li>
+<li>execute lua script</li>
+<li>warp</li>
+<li>forgive and forget</li>
+<li>barnstorming</li>
+<li>crib customize</li>
+<li>cash pickup</li>
+<li>crib weapons</li>
+<li>crib walk style</li>
+<li>crib clothing</li>
+<li>crib clipbool</li>
+<li>crib radio</li>
+<li>crib television trigger</li>
+<li>crib gang customize</li>
+<li>crib purchase</li>
+<li>exploration trigger</li>
+<li>save vehicle</li>
+<li>garage enter</li>
+<li>car mechanic</li>
+<li>audio kiosk</li>
+<li>emergent mission</li>
+<li>double callback</li>
+<li>liquor store</li>
+<li>music store</li>
+<li>clothing store</li>
+<li>weapon store</li>
+<li>freckle bitches</li>
+<li>car dealership</li>
+<li>jewelry store</li>
+<li>tattoo parlor</li>
+<li>store ownership</li>
+<li>plastic surgeon</li>
+<li>night club</li>
+<li>phuc mi phuc yue</li>
+<li>melee weapon store</li>
+<li>hot coffee</li>
+<li>charred hard burgers</li>
+<li>company of gyros</li>
+<li>jump collection</li>
+<li>train station</li>
+</ul>
+<h3 id="examples_2">Examples</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$Trigger:               &quot;ss08_$CG_01_T&quot;
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>$Trigger type:          &quot;sphere&quot;
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>$Trigger action:        &quot;execute lua script&quot;
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>$Trigger max fires: 0
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>$Trigger delay:     10000
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>$Start nav:             &quot;ss08_$CG_01_T&quot;
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>+Disabled
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>$Sphere radius:     6.100000
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    +Masked
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>$Trigger:               &quot;shops_sr2_city_$SX_rag_store&quot;
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>$Trigger type:          &quot;bounding box&quot;
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>$Trigger action:        &quot;clothing store&quot;
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>$Trigger max fires: 0
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>$Trigger delay:     10000
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>$Start nav:             &quot;shops_sr2_city_$SX_rag_store&quot;
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>+DemoDisabled
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>$Box size:              -1.000000 0.000000 -1.000000 1.000000 2.000000 1.000000
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>+Ignore Vehicles
+</span></code></pre></div>
+<h2 id="vehicles">Vehicles</h2>
+<ul>
+<li><strong>$Vehicle</strong>—string</li>
+<li><strong>$Vehicle type</strong>—string</li>
+<li><strong>$Start nav</strong>—string; navpoint name</li>
+<li><strong>$Group</strong>—string</li>
+<li><strong>$Stream Distance</strong>—float</li>
+<li><strong>+EngineOff</strong>—boolean</li>
+<li><strong>+Hit Points</strong>—integer</li>
+<li><strong>+Invulnerable</strong>—boolean</li>
+<li><strong>+ImmuneToFlatTires</strong>—boolean</li>
+<li><strong>+Hostile</strong>—boolean</li>
+<li><strong>+Critical</strong>—boolean</li>
+<li><strong>+Locked</strong>—boolean</li>
+<li><strong>+Variant</strong>—string</li>
+</ul>
+<h3 id="examples_3">Examples</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$Vehicle:       &quot;ss11_$Generals_Limo&quot;
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>$Vehicle type:  &quot;sp_hearse02&quot;
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>$Start nav:     &quot;ss11_$Generals_Limo&quot;
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>$Group:         &quot;ss11_$Generals_Limo&quot;
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>$Stream Distance:           50.000
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>+EngineOff
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>$Vehicle:       &quot;crowd_common_$v001&quot;
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>$Vehicle type:  &quot;car_2dr_exoticsports04&quot;
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>$Start nav:     &quot;crowd_common_$v001&quot;
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>$Group:         &quot;crowd_common_fpcar_group&quot;
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>$Stream Distance:           50.000
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>+Invulnerable
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>+ImmuneToFlatTires
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>+Locked
+</span></code></pre></div>
+<h2 id="respawns">Respawns</h2>
+<ul>
+<li><strong>$Respawn</strong>—string</li>
+<li><strong>$Start nav</strong>—string; navpoint name</li>
+<li><strong>$Box size</strong>--float[6]</li>
+<li><strong>+Vehicle</strong>—boolean</li>
+<li><strong>+MPTeam1</strong>—boolean</li>
+<li><strong>+MPTeam2</strong>—boolean</li>
+<li><strong>+Death</strong>—boolean; indicates that this is a hospital</li>
+<li><strong>+Busted</strong>—boolean; indicates that this is a police station</li>
+</ul>
+<h3 id="example_5">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$Respawn:       &quot;player_respawns_$DT_hospital&quot;
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>$Start nav:     &quot;player_respawns_$DT_hospital&quot;
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>$Box size:      -2.000000 0.000000 -2.000000 2.000000 2.000000 2.000000
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>+Death
+</span></code></pre></div>
+<h2 id="humans">Humans</h2>
+<ul>
+<li><strong>$Human</strong>—string</li>
+<li><strong>$Char type</strong>—string</li>
+<li><strong>$Start nav</strong>—string</li>
+<li><strong>+Hit points</strong>—integer</li>
+<li><strong>+Knockdown points</strong>—integer</li>
+<li><strong>+Hearing distance</strong>—float</li>
+<li><strong>+Leash distance</strong>—float</li>
+<li><strong>+Item</strong>—string[]</li>
+<li><strong>+Loot</strong>—string; item name</li>
+<li><strong>+Team</strong>—string, can be "Police", "Playas", "Brotherhood", "Civilian", "Ultor", "Ronin", "Samedi" or "Neutral Gang"</li>
+<li><strong>+Personality</strong>—string</li>
+<li><strong>+Cower/Flee</strong>—string; can be "never cower or flee", "always cower when attacked", "never flee" or "always flee when attacked"</li>
+<li><strong>+Blitz</strong>—boolean</li>
+<li><strong>+Camp</strong>—boolean</li>
+<li><strong>+CantFlee</strong>—boolean</li>
+<li><strong>+Kamikaze</strong>—boolean</li>
+<li><strong>+GunfireInvulnerable</strong>—boolean</li>
+<li><strong>+Deaf</strong>—boolean</li>
+<li><strong>+DontDropCash</strong>—boolean</li>
+<li><strong>+DontDropWeaponOnRagdoll</strong>—boolean</li>
+<li><strong>+DontEffectNotoriety</strong>—boolean</li>
+<li><strong>+IgnoreAI</strong>—boolean</li>
+<li><strong>+IgnoreAttacks</strong>—boolean</li>
+<li><strong>+Immaterial</strong>—boolean</li>
+<li><strong>+Invulnerable</strong>—boolean</li>
+<li><strong>+CannotBeGrabbed</strong>—boolean</li>
+<li><strong>+ShouldNotBeGrabbed</strong>—boolean</li>
+<li><strong>+NeverTurnOnPlayer</strong>—boolean</li>
+<li><strong>+Undismissable</strong>—boolean</li>
+<li><strong>+NeverPickupWeapons</strong>—boolean</li>
+<li><strong>+NeverSwitchWeapons</strong>—boolean</li>
+<li><strong>+AttackEnemiesOnSight</strong>—boolean</li>
+<li><strong>+AttackPlayerOnSight</strong>—boolean</li>
+<li><strong>+RespawnAfterDeath</strong>—boolean</li>
+<li><strong>+Sleeping</strong>—boolean</li>
+<li><strong>+Group</strong>—string</li>
+<li><strong>+Variant</strong>—string</li>
+<li><strong>+MinRank</strong>—integer</li>
+</ul>
+<h3 id="examples_4">Examples</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$Human:                 &quot;sr2_mp_sa_museum2_$Mission_police_1_1&quot;
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>$Char type:             &quot;npc_cop&quot;
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>$Start nav:             &quot;sr2_mp_sa_museum2_$Mission_police_1_1&quot;
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>+Hit points:            500
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>+Item:                  &quot;flashbang&quot;
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>+Item:                  &quot;stun_gun&quot;
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>+Item:                  &quot;nightstick&quot;
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>+Item:                  &quot;magnum&quot;
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>+Team:                  &quot;Police&quot;
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>+Personality:           &quot;police normal&quot;
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>+DontDropWeaponOnRagdoll
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>+Group:                 &quot;sr2_mp_sa_museum2_$Mission_police_npcs_1&quot;
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>$Human:                 &quot;ss04_$Shaundi&quot;
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>$Char type:             &quot;npc_Shaundi&quot;
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>$Start nav:             &quot;ss04_$Shaundi&quot;
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>+Personality:           &quot;civilian cowardly&quot;
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>+Cower/Flee:            &quot;always cower when attacked&quot;
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>+IgnoreAttacks
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>+ShouldNotBeGrabbed
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>+NeverTurnOnPlayer
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>+Undismissable
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>+NeverPickupWeapons
+</span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>+NeverSwitchWeapons
+</span><span id="__span-15-25"><a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>+Group:                 &quot;ss04_$Veteran_Child_and_Shaundi&quot;
+</span></code></pre></div>
+<h2 id="spawn-npc-regions">Spawn NPC Regions</h2>
+<p>This section is always empty when present.</p>
+<h2 id="racing">Racing</h2>
+<p>This section is always empty when present.</p>
+<h2 id="strongholds">Strongholds</h2>
+<p>This section is always empty when present.</p>
+<h2 id="action-nodes">Action Nodes</h2>
+<div class="admonition note">
+<p class="admonition-title">Format exception</p>
+<p>Note that action nodes are contained in their own files, which use a slightly different file format to other CTS files. See <a href="#action-node-files">here</a> for more details.</p>
+</div>
+<ul>
+<li><strong>$Node Type</strong>—string</li>
+<li><strong>$Action Node</strong>—string</li>
+<li><strong>$Pos</strong>—vec3 co-ordinates</li>
+<li><strong>$Orient</strong>—see <a href="#orient">above notes</a></li>
+<li><strong>$Object</strong>—string; always empty</li>
+<li><strong>$Object Chunk UID</strong>—integer; always 0</li>
+<li><strong>$Object Pos</strong>—vec3 co-ordinates</li>
+<li><strong>$Object Orient</strong>—see <a href="#orient">above notes</a></li>
+</ul>
+<h3 id="example_6">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$Node Type:     &quot;SPAWN_Workers&quot;
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>$Action Node:   &quot;ANode_$SPAWN_Wo_c070i_0000 (0)&quot;
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>$Pos:               &lt;-555.219971 5.002846 614.405212&gt;
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>$Orient:            [0.418879]
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    $Object:    &quot;&quot;
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    $Object Chunk UID:  0
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    $Object Pos:    &lt;0 0 0&gt;
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    $Object Orient: [I]
+</span></code></pre></div>
+<h2 id="parking">Parking</h2>
+<ul>
+<li><strong>$Parking</strong>—string</li>
+<li><strong>$Dimensions</strong>—float[2]</li>
+<li><strong>$Spawn Chance</strong>—integer; appears to be scale of 0-100</li>
+<li><strong>+Force vehicle</strong>—string</li>
+<li><strong>+AllowTrailer</strong>—boolean</li>
+<li><strong>+HeadInOnly</strong>—boolean</li>
+<li><strong>+ParkingGarage</strong>—boolean</li>
+</ul>
+<h3 id="example_7">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$Parking:           &quot;parking_spots_$parking_020&quot;
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>$Dimensions:        6.00 2.50
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>$Spawn Chance:      7
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>+Force vehicle: &quot;truck_2dr_construct01&quot;
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>+AllowTrailer
+</span></code></pre></div>
+<h2 id="chunkstreamingtestcases">ChunkStreamingTestCases</h2>
+<p>This section is always empty when present.</p>
+<h2 id="ambients">Ambients</h2>
+<ul>
+<li><strong>$Ambient</strong>—string</li>
+<li><strong>$Navpoint</strong>—string; navpoint name</li>
+<li><strong>$Shape</strong>—<a href="#shape">Shape</a></li>
+<li><strong>$Inner Offset</strong>—vec3</li>
+<li><strong>$Attachment Type</strong>—string; can be "None", "Effect", "Object", "Mission" or "Chunk"</li>
+<li><strong>$Chunk</strong>—Int64</li>
+<li><strong>$Chunk Effect</strong>—Int64[]</li>
+<li><strong>$Chunk Object</strong>—Int64[]</li>
+<li><strong>$Mission</strong>—string</li>
+<li><strong>$Emitter</strong>—<a href="#emitter">Emitter</a>[]</li>
+<li><strong>+Masked</strong>—boolean</li>
+</ul>
+<h3 id="example_8">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>$Ambient:   &quot;amb_sr2_mp_custbg_RT&quot;
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    $Navpoint:  &quot;amb_sr2_mp_custbg_RT&quot;
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    $Shape: &quot;Box&quot;
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>        $Inner Dimensions:  &lt;75.625000 51 19&gt;
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>        $Outer Dimensions:  &lt;75.750000 84.875000 52.500000&gt;
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    $Inner Offset:  &lt;0 0 0&gt;
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>    $Attachment Type:   &quot;None&quot;
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>    $Emitter:   &quot;list_0&quot;
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>        $Volume:    0.1750
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>        $Priority:  0.7700
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>        $Min Delay: 0
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>        $Max Delay: 0
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>        $Min ToD:   0
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>        $Max ToD:   0
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>        $ToD Fade In:   0
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>        $ToD Fade Out:  0
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>        $Play Type: &quot;In Order&quot;
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>        +File:  &quot;amb_int_room_med_1&quot;
+</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>    $Emitter:   &quot;radio&quot;
+</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>        $Volume:    0.5000
+</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>        $Priority:  0.0000
+</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>        $Radio: &quot;MP_Customization&quot;
+</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a>        $Min ToD:   0
+</span><span id="__span-18-24"><a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a>        $Max ToD:   0
+</span><span id="__span-18-25"><a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a>        $ToD Fade In:   0
+</span><span id="__span-18-26"><a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a>        $ToD Fade Out:  0
+</span><span id="__span-18-27"><a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a>    +Masked
+</span></code></pre></div>
+<h2 id="dsp-regions">DSP Regions</h2>
+<ul>
+<li><strong>$DSP</strong>—string</li>
+<li><strong>$Navpoint</strong>—string; navpoint name</li>
+<li><strong>$Shape</strong>—<a href="#shape">Shape</a></li>
+<li><strong>$Inner Offset</strong>—vec3</li>
+<li><strong>$Interior Reverb Send Level</strong>—float</li>
+<li><strong>$Exterior Reverb Send Level</strong>—float</li>
+<li><strong>+Masked</strong>—boolean</li>
+</ul>
+<h3 id="example_9">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>$DSP:   &quot;amb_redlight_DSP_Shanty&quot;
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    $Navpoint:  &quot;amb_redlight_DSP_Shanty&quot;
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    $Shape: &quot;Box&quot;
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>        $Inner Dimensions:  &lt;213 39.750000 376.500000&gt;
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>        $Outer Dimensions:  &lt;213.125000 39.875000 376.625000&gt;
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    $Inner Offset:  &lt;0 0 0&gt;
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    $Interior Reverb Send Level:    0.000
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>    $Exterior Reverb Send Level:    0.325
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    +Masked
+</span></code></pre></div>
+<h2 id="audio-cluders">Audio Cluders</h2>
+<ul>
+<li><strong>$Cluder</strong>—string</li>
+<li><strong>$Navpoint</strong>—string; navpoint name</li>
+<li><strong>$Door</strong>—boolean</li>
+<li><strong>$Chunk Object</strong>—Int64[]</li>
+<li><strong>$Mesh Chunk UID</strong>—Int64[]</li>
+<li><strong>$Mesh UID</strong>—Int64[]</li>
+<li><strong>$Rotation</strong>—vec3</li>
+<li><strong>$Inner</strong>—float[3]</li>
+<li><strong>$Outer</strong>—float[2]</li>
+<li><strong>$Offset</strong>—float[2]</li>
+<li><strong>+Building Exit</strong>—boolean</li>
+<li><strong>+On Corner</strong>—boolean</li>
+<li><strong>+Right Side Corner</strong>—boolean</li>
+<li><strong>+Masked</strong>—boolean</li>
+</ul>
+<h3 id="example_10">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$Cluder:    &quot;amb_cluder_$Airport9&quot;
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    $Navpoint:  &quot;amb_cluder_$Airport9&quot;
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    $Door:
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    $Mesh Chunk UID:    94
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>    $Mesh UID:  4294967295
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>    $Rotation:  &lt;0 0 0&gt;
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>    $Inner: 2.625000    2.625000    0.181954
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>    $Outer: 3.375000    2.875000
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>    $Offset:    0.000000    0.000000
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>    +Masked
+</span></code></pre></div>
+<h2 id="nodes">Nodes</h2>
+<ul>
+<li><strong>$Node</strong>—string</li>
+<li><strong>$Pos</strong>—vec3 co-ordinates</li>
+<li><strong>$Orient</strong>—see <a href="#orient">above notes</a></li>
+<li><strong>$AngleLeft</strong>—float</li>
+<li><strong>$AngleRight</strong>—float</li>
+<li><strong>$EdgeDistLeft</strong>—float</li>
+<li><strong>$EdgeDistRight</strong>—float</li>
+</ul>
+<h3 id="example_11">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>$Node:              &quot;docks_$cvr017&quot;
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>$Pos:                   &lt;-684.455139 15.756905 1575.781128&gt;
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>$Orient:                [-1.850062]
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>$Angle left:        1.558446
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>$Angle right:       0.785405
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>$Edge dist left:    23.141356
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>$Edge dist right:   1.414323
+</span></code></pre></div>
+<h2 id="searchlights">Searchlights</h2>
+<ul>
+<li><strong>$Searchlight</strong>—string</li>
+<li><strong>$Type</strong>—string; is always "Basic"</li>
+<li><strong>$Anim</strong>—string</li>
+<li><strong>$Vert Min</strong>—float</li>
+<li><strong>$Vert Max</strong>—float</li>
+<li><strong>$Horz Min</strong>—float</li>
+<li><strong>$Horz Max</strong>—float</li>
+<li><strong>+TrackPlayers</strong>—boolean</li>
+<li><strong>+TrackPlayerFollowers</strong>—boolean</li>
+<li><strong>$Min Player Notoriety</strong>—integer</li>
+</ul>
+<h3 id="example_12">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>$Searchlight:                   &quot;nuke_$searchlight01&quot;
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>$Type:                  &quot;Basic&quot;
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>$Anim:                  &quot;horizontal_sweep&quot;
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>$Vert Min:                  -0.88
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>$Vert Max:                  -0.28
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>$Horz Min:                  -1.22
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>$Horz Max:                  1.22
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>+TrackPlayers
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>$Min Player Notoriety:          1
+</span></code></pre></div>
+<h2 id="movers">Movers</h2>
+<ul>
+<li><strong>$Mover</strong>—string</li>
+<li><strong>$Object UID</strong>—Int64</li>
+<li><strong>$Object Name</strong>—string</li>
+<li><strong>$Chunk</strong>—string; chunk name</li>
+<li><strong>+Hit points</strong>—integer</li>
+<li><strong>+VerticalDoor</strong>—boolean</li>
+</ul>
+<h3 id="examples_5">Examples</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>$Mover:     &quot;ss03_$Chem_Depot_01&quot;
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>$Object Name:   &quot;SU128_BarrelFurtilizer01&quot;
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>$Chunk:     &quot;sr2_chunk128&quot;
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>+Hit points:            2000
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>$Mover:     &quot;ep02_$MMdoor_apc&quot;
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>$Object UID:    46978
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>$Chunk:     &quot;SR2_UG_chunk095_UB01&quot;
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>+VerticalDoor
+</span></code></pre></div>
+<h2 id="interiors">Interiors</h2>
+<ul>
+<li><strong>$Interior</strong>—string</li>
+<li><strong>$Object UID</strong>—Int64</li>
+<li><strong>$Chunk</strong>—string; chunk name</li>
+<li><strong>+Police Notoriety</strong>—integer</li>
+</ul>
+<h3 id="example_13">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>$Interior:      &quot;shops_sr2_city_$UN_gas_int&quot;
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>$Object UID:    47819
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>$Chunk:     &quot;sr2_chunk118_GS&quot;
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>+Police Notoriety:  0
+</span></code></pre></div>
+<h2 id="taggingspots">TaggingSpots</h2>
+<ul>
+<li><strong>$Tagging Spot</strong>—string</li>
+<li><strong>$Pos</strong>—vec3 co-ordinates</li>
+<li><strong>$Orient</strong>—see <a href="#orient">above notes</a></li>
+<li><strong>$Chunk</strong>—string; chunk name</li>
+<li><strong>+Ambient</strong>—boolean</li>
+</ul>
+<h3 id="example_14">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>$Tagging Spot:  &quot;tagging_spots_spot00&quot;
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>$Pos:       &lt;737.151611 11.547469 -2042.812012&gt;
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>$Orient:    [-1.611664]
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>$Chunk:     &quot;sr2_chunk182&quot;
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>+Ambient
+</span></code></pre></div>
+<h2 id="assets">Assets</h2>
+<p>List of strings.</p>
+<h3 id="examples_6">Examples</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>// -------
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>#Assets
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>// -------
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>$Asset:     &quot;compCam.smeshx&quot;
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>$Asset:     &quot;gml1_bs_sd_signin.animx&quot;
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>$Asset:     &quot;gfl1_bs_run_hcking.animx&quot;
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>$Asset:     &quot;gfl1_bs_walk_hcking.animx&quot;
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>$Asset:     &quot;gfl1_bs_sd_rd_hcking.animx&quot;
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>$Asset:     &quot;gfl1_bs_sd_hcking.animx&quot;
+</span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>$Asset:     &quot;gfl1_bs_standto_hcking.animx&quot;
+</span></code></pre></div>
+<h1 id="subtypes">Subtypes</h1>
+<h2 id="shape">Shape</h2>
+<ul>
+<li><strong>$Shape</strong>—string; can be one of "Box", "Spline Tube", "Sphere", "Spline Box" or "Cylinder"</li>
+<li><strong>$Inner Dimensions</strong>—vec3</li>
+<li><strong>$Outer Dimensions</strong>—vec3</li>
+<li><strong>$Inner Radius</strong>—float</li>
+<li><strong>$Outer Radius</strong>—float</li>
+<li><strong>$Inner Height</strong>—float</li>
+<li><strong>$Outer Height</strong>—float</li>
+<li><strong>$Knot</strong>—vec3[]</li>
+</ul>
+<h3 id="examples_7">Examples</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>$Shape: &quot;Cylinder&quot;
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    $Inner Radius:  617.13
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>    $Outer Radius:  770.13
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>    $Inner Height:  21.50
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>    $Outer Height:  370.63
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>$Shape: &quot;Spline Tube&quot;
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>    $Inner Radius:  5.88
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>    $Outer Radius:  57.88
+</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>    $Knot:  &lt;-89.740372 -6.029552 1333.107544&gt;
+</span><span id="__span-27-11"><a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>    $Knot:  &lt;-66.573921 -6.029553 1369.219238&gt;
+</span><span id="__span-27-12"><a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>    $Knot:  &lt;-44.382969 -6.029553 1399.490601&gt;
+</span><span id="__span-27-13"><a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>    $Knot:  &lt;-24.631512 -6.029556 1428.242554&gt;
+</span><span id="__span-27-14"><a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a>    $Knot:  &lt;-21.982393 -6.029558 1462.313843&gt;
+</span><span id="__span-27-15"><a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a>    $Knot:  &lt;-38.264965 -6.029556 1484.628418&gt;
+</span><span id="__span-27-16"><a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a>    $Knot:  &lt;-64.445610 -6.029557 1499.488525&gt;
+</span><span id="__span-27-17"><a id="__codelineno-27-17" name="__codelineno-27-17" href="#__codelineno-27-17"></a>    $Knot:  &lt;-86.900108 -6.029560 1505.799438&gt;
+</span><span id="__span-27-18"><a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a>    $Knot:  &lt;-121.373367 -6.029560 1501.184204&gt;
+</span><span id="__span-27-19"><a id="__codelineno-27-19" name="__codelineno-27-19" href="#__codelineno-27-19"></a>    $Knot:  &lt;-161.721863 -6.029559 1479.357666&gt;
+</span><span id="__span-27-20"><a id="__codelineno-27-20" name="__codelineno-27-20" href="#__codelineno-27-20"></a>    $Knot:  &lt;-188.090714 -6.029554 1444.048706&gt;
+</span><span id="__span-27-21"><a id="__codelineno-27-21" name="__codelineno-27-21" href="#__codelineno-27-21"></a>
+</span><span id="__span-27-22"><a id="__codelineno-27-22" name="__codelineno-27-22" href="#__codelineno-27-22"></a>
+</span><span id="__span-27-23"><a id="__codelineno-27-23" name="__codelineno-27-23" href="#__codelineno-27-23"></a>$Shape: &quot;Box&quot;
+</span><span id="__span-27-24"><a id="__codelineno-27-24" name="__codelineno-27-24" href="#__codelineno-27-24"></a>    $Inner Dimensions:  &lt;36.125000 63.875000 117.750000&gt;
+</span><span id="__span-27-25"><a id="__codelineno-27-25" name="__codelineno-27-25" href="#__codelineno-27-25"></a>    $Outer Dimensions:  &lt;40 67.375000 121.500000&gt;
+</span></code></pre></div>
+<h2 id="emitter">Emitter</h2>
+<ul>
+<li><strong>$Emitter</strong>—string</li>
+<li><strong>$Volume</strong>—float</li>
+<li><strong>$Priority</strong>—float</li>
+<li><strong>$Min Delay</strong>—integer</li>
+<li><strong>$Max Delay</strong>—integer</li>
+<li><strong>$Min ToD</strong>—integer</li>
+<li><strong>$Max ToD</strong>—integer</li>
+<li><strong>$ToD Fade In</strong>—integer</li>
+<li><strong>$ToD Fade Out</strong>—integer</li>
+<li><strong>$Play Type</strong>—string; can be "Random" or "In Order"</li>
+<li><strong>+Ambient Tone</strong>—boolean</li>
+<li><strong>+Force Exterior Source</strong>—boolean</li>
+<li><strong>+Silence on Weapon Fire</strong>—boolean</li>
+<li><strong>+Silence on Rain</strong>—boolean</li>
+<li><strong>+File</strong>—string[]</li>
+</ul>
+<h3 id="example_15">Example</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>$Emitter:   &quot;gulls&quot;
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    $Volume:    0.3375
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>    $Priority:  0.2000
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>    $Min Delay: 6000
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>    $Max Delay: 12000
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>    $Min ToD:   600
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>    $Max ToD:   2200
+</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>    $ToD Fade In:   30000
+</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>    $ToD Fade Out:  30000
+</span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>    $Play Type: &quot;Random&quot;
+</span><span id="__span-28-11"><a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>    +Silence on Rain
+</span><span id="__span-28-12"><a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>    +File:  &quot;amb_ext_seagulls_01&quot;
+</span><span id="__span-28-13"><a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>    +File:  &quot;amb_ext_seagulls_02&quot;
+</span><span id="__span-28-14"><a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>    +File:  &quot;amb_ext_seagulls_03&quot;
+</span><span id="__span-28-15"><a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a>    +File:  &quot;amb_ext_seagulls_04&quot;
+</span><span id="__span-28-16"><a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a>    +File:  &quot;amb_ext_seagulls_05&quot;
+</span><span id="__span-28-17"><a id="__codelineno-28-17" name="__codelineno-28-17" href="#__codelineno-28-17"></a>    +File:  &quot;amb_ext_seagulls_06&quot;
+</span><span id="__span-28-18"><a id="__codelineno-28-18" name="__codelineno-28-18" href="#__codelineno-28-18"></a>    +File:  &quot;amb_ext_seagulls_group_01&quot;
+</span><span id="__span-28-19"><a id="__codelineno-28-19" name="__codelineno-28-19" href="#__codelineno-28-19"></a>    +File:  &quot;amb_ext_seagulls_group_02&quot;
+</span><span id="__span-28-20"><a id="__codelineno-28-20" name="__codelineno-28-20" href="#__codelineno-28-20"></a>    +File:  &quot;amb_ext_seagulls_group_03&quot;
+</span><span id="__span-28-21"><a id="__codelineno-28-21" name="__codelineno-28-21" href="#__codelineno-28-21"></a>    +File:  &quot;amb_ext_seagulls_group_04&quot;
+</span><span id="__span-28-22"><a id="__codelineno-28-22" name="__codelineno-28-22" href="#__codelineno-28-22"></a>    +File:  &quot;amb_ext_seagulls_group_05&quot;
+</span></code></pre></div>
+<h1 id="format-exceptions">Format exceptions</h1>
+<h2 id="action-node-files">Action node files</h2>
+<p>Action node files have no section headings whatsoever, nor a <code>#End</code> at the file. Additionally, their name field comes second, not first. They are otherwise typical CTS files.</p>
+<p>These are generally, but not always, files matching the regular expression <code>/sr2(_[A-Z]{2})?_chunk[0-9]{3}(_[A-Z]{2})?\.cts/i</code>.</p>
+<h2 id="st2_meshlibrary_fade_distscts">st2_meshlibrary_fade_dists.cts</h2>
+<p>This file, located within the archive <code>common.vpp_pc</code>, is effectively just a CSV. Each line has a string encased in double quotes and a floating point number, separated by two tab characters.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

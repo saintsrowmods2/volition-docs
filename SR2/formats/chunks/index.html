@@ -1,0 +1,2292 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://saintsrowmods2.github.io/volition-docs/SR2/formats/chunks/">
+      
+      
+        <link rel="prev" href="../vehicle/">
+      
+      
+        <link rel="next" href="g_chunk_pc/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Chunks - Volition File Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chunks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Volition File Docs" class="md-header__button md-logo" aria-label="Volition File Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Volition File Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chunks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Volition File Docs" class="md-nav__button md-logo" aria-label="Volition File Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Volition File Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">SR2</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="SR2" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          SR2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../filelist/">Filelist</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Filelist" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Filelist
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/anims.vpp_pc/" class="md-nav__link">
+        anims.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/audio.vpp_pc/" class="md-nav__link">
+        audio.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/chunks1.vpp_pc/" class="md-nav__link">
+        chunks1.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/chunks2.vpp_pc/" class="md-nav__link">
+        chunks2.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/chunks3.vpp_pc/" class="md-nav__link">
+        chunks3.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/chunks4.vpp_pc/" class="md-nav__link">
+        chunks4.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/city_load.vpp_pc/" class="md-nav__link">
+        city_load.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/common.vpp_pc/" class="md-nav__link">
+        common.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/cutscenes.vpp_pc/" class="md-nav__link">
+        cutscenes.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/hmaps.vpp_pc/" class="md-nav__link">
+        hmaps.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/meshes.vpp_pc/" class="md-nav__link">
+        meshes.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/music1.vpp_pc/" class="md-nav__link">
+        music1.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/music2.vpp_pc/" class="md-nav__link">
+        music2.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/music3.vpp_pc/" class="md-nav__link">
+        music3.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/music4.vpp_pc/" class="md-nav__link">
+        music4.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/patch.vpp_pc/" class="md-nav__link">
+        patch.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/pegs.vpp_pc/" class="md-nav__link">
+        pegs.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/preload.tbl/" class="md-nav__link">
+        preload.tbl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filelist/textures.vpp_pc/" class="md-nav__link">
+        textures.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Formats</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Formats" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Formats
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cityfiles/" class="md-nav__link">
+        Cityfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cts/" class="md-nav__link">
+        CTS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cvtf/" class="md-nav__link">
+        Vehicle Table
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packfiles/" class="md-nav__link">
+        Packfiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pegfiles/" class="md-nav__link">
+        Pegfiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables/" class="md-nav__link">
+        Tables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vehicle/" class="md-nav__link">
+        Vehicles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3_9" type="checkbox" id="__nav_2_3_9" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="./">Chunks</a>
+          
+            <label for="__nav_2_3_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Chunks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          Chunks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="g_chunk_pc/" class="md-nav__link">
+        g_chunk_pc
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3_10" type="checkbox" id="__nav_2_3_10" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../meshes/">Meshes</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Meshes" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_10">
+          <span class="md-nav__icon md-icon"></span>
+          Meshes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../lua/">Lua</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Lua" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Lua
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          SRIV
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SRIV" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          SRIV
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" tabindex="0" aria-expanded="false">
+          Formats
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Formats" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Formats
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRIV/formats/anim/" class="md-nav__link">
+        Animation Formats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRIV/formats/meshes/" class="md-nav__link">
+        Mesh Formats
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          SRTT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SRTT" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          SRTT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../SRTT/formats/">Formats</a>
+          
+            <label for="__nav_4_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Formats" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Formats
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/anim/" class="md-nav__link">
+        Animation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/common/" class="md-nav__link">
+        Common
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/meshes/" class="md-nav__link">
+        Meshes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/peg/" class="md-nav__link">
+        Pegfiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/vpp/" class="md-nav__link">
+        Packfiles and ASM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/zone/" class="md-nav__link">
+        Zone files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../SRTT/lua/">Lua</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Lua" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Lua
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/cmesh2obj/" class="md-nav__link">
+        cmesh2obj
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/minimauls_tools/" class="md-nav__link">
+        Minimaul's tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/quantum_sr_zone_tools/" class="md-nav__link">
+        quantum_sr_zone_tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/sr2_chonker/" class="md-nav__link">
+        SR2 Chonker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/sr2chunkstexturetool/" class="md-nav__link">
+        SR2 ChunksTextureTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/sr2ctsmapper/" class="md-nav__link">
+        SR2 CTS Mapper
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/sr2pegtool/" class="md-nav__link">
+        SR2 PegTool
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    About
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chunk_pc-layout" class="md-nav__link">
+    .chunk_pc Layout
+  </a>
+  
+    <nav class="md-nav" aria-label=".chunk_pc Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texture_list" class="md-nav__link">
+    texture_list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model_info" class="md-nav__link">
+    model_info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static_collision" class="md-nav__link">
+    static_collision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model_buffer_headers" class="md-nav__link">
+    model_buffer_headers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    materials
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g_model_headers" class="md-nav__link">
+    g_model_headers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objects" class="md-nav__link">
+    objects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown_names_12" class="md-nav__link">
+    unknown_names_12
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown13" class="md-nav__link">
+    unknown13
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown18" class="md-nav__link">
+    unknown18
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown19" class="md-nav__link">
+    unknown19
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown20" class="md-nav__link">
+    unknown20
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown21" class="md-nav__link">
+    unknown21
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown22" class="md-nav__link">
+    unknown22
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown23" class="md-nav__link">
+    unknown23
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown24" class="md-nav__link">
+    unknown24
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown25" class="md-nav__link">
+    unknown25
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesh_movers" class="md-nav__link">
+    mesh_movers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown27" class="md-nav__link">
+    unknown27
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown28" class="md-nav__link">
+    unknown28
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown29" class="md-nav__link">
+    unknown29
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown30" class="md-nav__link">
+    unknown30
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown31" class="md-nav__link">
+    unknown31
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown32" class="md-nav__link">
+    unknown32
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesh_mover_names" class="md-nav__link">
+    mesh_mover_names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lights" class="md-nav__link">
+    lights
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chunks">Chunks</h1>
+<div class="admonition note">
+<p class="admonition-title">File extensions</p>
+<p><code>.chunk_pc</code>
+<code>.g_chunk_pc</code> </p>
+</div>
+<h2 id="about">About</h2>
+<div class="admonition info">
+<p class="admonition-title">[V] Knobby said:</p>
+<p>... The chunk_pc file is a loadable part of the world. It is what is needed for a physical chunk of the world. This includes the level geometry, level collision, sidewalk data, traffic splines, world objects, textures, etc. I say etc, but it really is probably just the tip of the iceberg. This is a massive monolithic file full of all kinds of things.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">File contents</p>
+<p><strong>Things found in chunkfiles:</strong></p>
+<ul>
+<li><strong>Materials</strong><br />
+Texture list, Shader params, Hashed shader names</li>
+<li><strong>GPU Models</strong><br />
+Every visible model is in the g_chunk file. The format for static models is figured out.</li>
+<li><strong>CPU Models</strong><br />
+The chunk_pc file itself contains models too, with no UV's or other extra data. Labeled as physmodels, since they're probably collision for loose objects.</li>
+<li><strong>Objects</strong><br />
+Static world models and loose objects.</li>
+<li>
+<p><strong>Static world collision</strong>  </p>
+</li>
+<li>
+<p><strong>Light sources</strong></p>
+</li>
+<li><strong>Mesh movers</strong><br />
+Used for doors and other simple animations.</li>
+</ul>
+<p><strong>Not yet found but expected:</strong></p>
+<ul>
+<li>Traffic paths, sidewalk data</li>
+</ul>
+<p>Some of this stuff could lie in the parts where the layout is already figured out. Just have to mess around with these values.</p>
+</div>
+<p>The .chunk_pc file internally shares a lot of structures with other files.</p>
+<h2 id="chunk_pc-layout">.chunk_pc Layout</h2>
+<h3 id="header">header</h3>
+<p>256B header</p>
+<details class="note">
+<summary>Header</summary>
+<table>
+<thead>
+<tr>
+<th>Offset</th>
+<th>Type</th>
+<th>Name</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x0</td>
+<td>u32</td>
+<td>magic</td>
+<td></td>
+</tr>
+<tr>
+<td>0x4</td>
+<td>u32</td>
+<td>version</td>
+<td>always 121</td>
+</tr>
+<tr>
+<td>0x8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xC</td>
+<td>u32</td>
+<td>(unused)</td>
+<td>always 0</td>
+</tr>
+<tr>
+<td>0x10</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>0x94</td>
+<td>u32</td>
+<td>cityobject_count</td>
+<td></td>
+</tr>
+<tr>
+<td>0x98</td>
+<td>u32</td>
+<td>unknown23_count</td>
+<td></td>
+</tr>
+<tr>
+<td>0x9C</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xA0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xA4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xA8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xAC</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xB0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xB4</td>
+<td>u32</td>
+<td>mesh_mover_count</td>
+<td></td>
+</tr>
+<tr>
+<td>0xB8</td>
+<td>u32</td>
+<td>unknown27_count</td>
+<td></td>
+</tr>
+<tr>
+<td>0xBC</td>
+<td>u32</td>
+<td>unknown28_count</td>
+<td></td>
+</tr>
+<tr>
+<td>0xC0</td>
+<td>u32</td>
+<td>unknown29_count</td>
+<td></td>
+</tr>
+<tr>
+<td>0xC4</td>
+<td>u32</td>
+<td>unknown30_count</td>
+<td></td>
+</tr>
+<tr>
+<td>0xC8</td>
+<td>u32</td>
+<td>unknown31_count</td>
+<td></td>
+</tr>
+<tr>
+<td>0xCC</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xD0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xD4</td>
+<td>f32</td>
+<td></td>
+<td>These look like world coords.</td>
+</tr>
+<tr>
+<td>0xD8</td>
+<td>f32</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xDC</td>
+<td>f32</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xE0</td>
+<td>f32</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xE4</td>
+<td>f32</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xE8</td>
+<td>f32</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xEC</td>
+<td>f32</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xF0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xF4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xF8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0xFC</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="language-cpp highlight"><span class="filename">chunk_pc header</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// size: 0x100</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">chunk_header</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">signature</span><span class="p">;</span><span class="w">      </span><span class="c1">//</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">version</span><span class="p">;</span><span class="w">        </span><span class="c1">// Version 121</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x08</span><span class="p">;</span><span class="w">    </span><span class="c1">// </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unused_0x0c</span><span class="p">;</span><span class="w">    </span><span class="c1">// always 0</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="c1">// ... todo ... //</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="texture_list">texture_list</h3>
+<p>Filename of each texture used in the chunk.
+Always starts at 0x100 as the header is fixed length.
+Size 16-byte aligned</p>
+<p><div class="language-cpp highlight"><span class="filename">chunk_pc texturelist</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int32_t</span><span class="w">     </span><span class="n">num_textures</span><span class="p">;</span><span class="w">               </span><span class="c1">//</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">uint32_t</span><span class="w">    </span><span class="n">padding</span><span class="p">[</span><span class="n">num_textures</span><span class="p">];</span><span class="w">      </span><span class="c1">//</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kt">char</span><span class="w">        </span><span class="n">texture_names</span><span class="p">[</span><span class="n">num_textures</span><span class="p">];</span><span class="c1">//</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">align</span><span class="w"> </span><span class="mi">16</span><span class="w">                                </span><span class="c1">//</span>
+</span></code></pre></div>
+The objects are split into two structs, located very far apart in the file. The second part is found at <a href=".#objects">#objects</a>.
+Some of these transforms are left unused by objects.</p>
+<h3 id="model_info">model_info</h3>
+<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">object_data_0_header</span><span class="w">    </span><span class="n">header</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">align</span><span class="w"> </span><span class="mi">16</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">gpu_model_unknown</span><span class="w">       </span><span class="p">[</span><span class="n">header</span><span class="p">.</span><span class="n">num_gpu_models</span><span class="p">]</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">align</span><span class="w"> </span><span class="mi">16</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">object_transform</span><span class="w">        </span><span class="p">[</span><span class="n">header</span><span class="p">.</span><span class="n">num_object_transforms</span><span class="p">]</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">align</span><span class="w"> </span><span class="mi">16</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">object_unknown3</span><span class="w">         </span><span class="p">[</span><span class="n">header</span><span class="p">.</span><span class="n">num_unknown3s</span><span class="p">]</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">align</span><span class="w"> </span><span class="mi">16</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">object_unknown4</span><span class="w">         </span><span class="p">[</span><span class="n">header</span><span class="p">.</span><span class="n">num_unknown4s</span><span class="p">]</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">align</span><span class="w"> </span><span class="mi">16</span>
+</span></code></pre></div>
+<div class="language-cpp highlight"><span class="filename">structs</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// size: 0x20</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">object_data_0_header</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">num_gpu_models</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">num_object_transforms</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">num_cpu_models</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">num_unknown3s</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">num_unknown4s</span><span class="p">;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">};</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1">// size: 0x18</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="k">struct</span><span class="w"> </span><span class="nc">gpu_model_unknown</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">unknown0x00</span><span class="p">;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">unknown0x04</span><span class="p">;</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">unknown0x08</span><span class="p">;</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">unknown0x0c</span><span class="p">;</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">unknown0x10</span><span class="p">;</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">unknown0x14</span><span class="p">;</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="p">};</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="c1">// Every object has one of these, but there are always just a couple left unused??</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="c1">// size: 0x50</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="k">struct</span><span class="w"> </span><span class="nc">object_transform</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">    </span><span class="n">fl_vector</span><span class="w">   </span><span class="n">origin</span><span class="p">;</span><span class="w">         </span><span class="c1">// XYZ 3x float</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="n">fl_vector</span><span class="w">   </span><span class="n">xform_basis_x</span><span class="p">;</span><span class="w">  </span><span class="c1">//</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="n">fl_vector</span><span class="w">   </span><span class="n">xform_basis_y</span><span class="p">;</span><span class="w">  </span><span class="c1">//</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="n">fl_vector</span><span class="w">   </span><span class="n">xform_basis_z</span><span class="p">;</span><span class="w">  </span><span class="c1">//</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">    </span><span class="c1">// ... //</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x4C</span><span class="p">;</span><span class="w">    </span><span class="c1">//</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x50</span><span class="p">;</span><span class="w">    </span><span class="c1">// always 0?</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x54</span><span class="p">;</span><span class="w">    </span><span class="c1">//</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">model_idx</span><span class="p">;</span><span class="w">      </span><span class="c1">// gpu model index</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x5C</span><span class="p">;</span><span class="w">    </span><span class="c1">//</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="p">};</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="c1">// size: 0x64</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="k">public</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">object_unknown3</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x00</span><span class="p">;</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x04</span><span class="p">;</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x08</span><span class="p">;</span>
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x0C</span><span class="p">;</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x10</span><span class="p">;</span>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x14</span><span class="p">;</span>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x18</span><span class="p">;</span>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x1C</span><span class="p">;</span>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x20</span><span class="p">;</span>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x24</span><span class="p">;</span>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x28</span><span class="p">;</span>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x2C</span><span class="p">;</span>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x30</span><span class="p">;</span>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x34</span><span class="p">;</span>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x38</span><span class="p">;</span>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x3C</span><span class="p">;</span>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x40</span><span class="p">;</span>
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x44</span><span class="p">;</span>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x48</span><span class="p">;</span>
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x4C</span><span class="p">;</span>
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x50</span><span class="p">;</span>
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x54</span><span class="p">;</span>
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x58</span><span class="p">;</span>
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x5C</span><span class="p">;</span>
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x60</span><span class="p">;</span>
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a><span class="p">};</span>
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a><span class="c1">// size: 0x34</span>
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a><span class="k">public</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">object_unknown4</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a><span class="w">    </span><span class="kt">float</span><span class="w">   </span><span class="n">unknown0x00</span><span class="p">;</span>
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a><span class="w">    </span><span class="kt">float</span><span class="w">   </span><span class="n">unknown0x04</span><span class="p">;</span>
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a><span class="w">    </span><span class="kt">float</span><span class="w">   </span><span class="n">unknown0x08</span><span class="p">;</span>
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a><span class="w">    </span><span class="kt">float</span><span class="w">   </span><span class="n">unknown0x0C</span><span class="p">;</span>
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a><span class="w">    </span><span class="kt">float</span><span class="w">   </span><span class="n">unknown0x10</span><span class="p">;</span>
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a><span class="w">    </span><span class="kt">float</span><span class="w">   </span><span class="n">unknown0x14</span><span class="p">;</span>
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a><span class="w">    </span><span class="kt">float</span><span class="w">   </span><span class="n">unknown0x18</span><span class="p">;</span>
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a><span class="w">    </span><span class="kt">float</span><span class="w">   </span><span class="n">unknown0x1C</span><span class="p">;</span>
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a><span class="w">    </span><span class="kt">float</span><span class="w">   </span><span class="n">unknown0x20</span><span class="p">;</span>
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a><span class="w">    </span><span class="kt">float</span><span class="w">   </span><span class="n">unknown0x24</span><span class="p">;</span>
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a><span class="w">    </span><span class="kt">float</span><span class="w">   </span><span class="n">unknown0x28</span><span class="p">;</span>
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a><span class="w">    </span><span class="kt">float</span><span class="w">   </span><span class="n">unknown0x2C</span><span class="p">;</span>
+</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a><span class="w">    </span><span class="kt">float</span><span class="w">   </span><span class="n">unknown0x30</span><span class="p">;</span>
+</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a><span class="p">};</span>
+</span></code></pre></div></p>
+<h3 id="static_collision">static_collision</h3>
+<div class="admonition note">
+<p class="admonition-title">links</p>
+<p><em>Some</em> knowledge of havok collisions: <a href="https://niftools.sourceforge.net/wiki/Nif_Format/Mopp">https://niftools.sourceforge.net/wiki/Nif_Format/Mopp</a></p>
+</div>
+<p>Collision for all static objects in a chunk seem to be baked into one Havok collision blob. This is inherently unmoddable, unless some genius comes forward and figures out Havok collisions. Look up Havok MOPP for some info from other mod scenes, though there isn't much.</p>
+<p>The vertices seem to match GPU models.</p>
+<h3 id="model_buffer_headers">model_buffer_headers</h3>
+<p>Defines vertex and index buffers in both <code>.chunk_pc</code> and <code>.g_chunk_pc</code>.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="n">model_buffer_header</span><span class="w">     </span><span class="p">[]</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">model_v_buffer_header</span><span class="w">   </span><span class="p">[]</span><span class="w"> </span><span class="c1">// times num_v_buffers for each model_buffer_header</span>
+</span></code></pre></div></p>
+<div class="language-cpp highlight"><span class="filename">structs</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// &quot;CPU model&quot; is stored in this file (.chunk_pc). Probably used for loose object collision.</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">// &quot;GPU model&quot; is stored in this .g_chunk</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1">// One big shared one for g_chunk and many individual model buffers for cpu chunk</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">// size: 0x14</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">struct</span><span class="w"> </span><span class="nc">model_buffer_header</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="kt">int16_t</span><span class="w">     </span><span class="n">type</span><span class="p">;</span><span class="w">           </span><span class="c1">// Either 7 or 0? 7 is CPU, 0 GPU.</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="kt">int16_t</span><span class="w">     </span><span class="n">num_v_buffers</span><span class="p">;</span><span class="w">  </span><span class="c1">// Always 1 for CPU</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">num_indices</span><span class="p">;</span><span class="w">    </span><span class="c1">//</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x08</span><span class="p">;</span><span class="w">    </span><span class="c1">// always -1</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x0c</span><span class="p">;</span><span class="w">    </span><span class="c1">// always -1</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x10</span><span class="p">;</span><span class="w">    </span><span class="c1">// always 0</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">}</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="c1">// Defines a vertex buffer.</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="c1">// The model_buffer_header for g_chunk contains many v buffers, one for each combination of num_unk2b and num_uvs used in the chunk.</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="c1">// size: 0x10</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="k">struct</span><span class="w"> </span><span class="nc">model_v_buffer_header</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w">     </span><span class="n">num_unk2b</span><span class="p">;</span><span class="w">      </span><span class="c1">// Number of whatever this data is in a vertex. Adds 2B to vert size each. Always 0 on CPU</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w">     </span><span class="n">num_uvs</span><span class="p">;</span><span class="w">        </span><span class="c1">// Number of UV&#39;s in a vertex. Adds 4B to vert size each. Always 0 on CPU</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w">    </span><span class="n">len_vertex</span><span class="p">;</span><span class="w">     </span><span class="c1">// Size of one vert in bytes. Size is 12B + the above</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">num_vertices</span><span class="p">;</span><span class="w">   </span><span class="c1">//</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x08</span><span class="p">;</span><span class="w">    </span><span class="c1">// always -1</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x0c</span><span class="p">;</span><span class="w">    </span><span class="c1">// always 0</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="materials">materials</h3>
+<p>Very similar to already documented SRTT / IV format.</p>
+<h3 id="g_model_headers">g_model_headers</h3>
+<p>Defines offset and number for verts and indices for a mesh in the big shared <code>.g_chunk_pc</code> buffers</p>
+<h3 id="objects">objects</h3>
+<ul>
+<li>objects</li>
+<li>names</li>
+</ul>
+<div class="language-cpp highlight"><span class="filename">structs</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">object</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">fl_vector</span><span class="w">   </span><span class="n">bb_min</span><span class="p">;</span><span class="w">             </span><span class="c1">// bbox used for culling</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x0c</span><span class="p">;</span><span class="w">        </span><span class="c1">// always 0?</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">fl_vector</span><span class="w">   </span><span class="n">bb_max</span><span class="p">;</span><span class="w">             </span><span class="c1">// bbox used for culling</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">render_distance</span><span class="p">;</span><span class="w">    </span><span class="c1">//</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x20</span><span class="p">;</span><span class="w">        </span><span class="c1">// always 0?</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x24</span><span class="p">;</span><span class="w">        </span><span class="c1">//</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x28</span><span class="p">;</span><span class="w">        </span><span class="c1">// always 0?</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="kt">int16_t</span><span class="w">     </span><span class="n">unknown0x2C</span><span class="p">;</span><span class="w">        </span><span class="c1">//</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="kt">int16_t</span><span class="w">     </span><span class="n">unknown0x2E</span><span class="p">;</span><span class="w">        </span><span class="c1">// zero pad for alignemt</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">flags</span><span class="p">;</span><span class="w">              </span><span class="c1">//</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x34</span><span class="p">;</span><span class="w">        </span><span class="c1">//</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x38</span><span class="p">;</span><span class="w">        </span><span class="c1">// Almost always 0. Exceptions: sr2_skybox, sr2_intdkmissunkdk, sr2_intarcutlimo, sr2_intaicutjyucar</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x3C</span><span class="p">;</span><span class="w">        </span><span class="c1">//</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">transform_idx</span><span class="p">;</span><span class="w">      </span><span class="c1">// See object_transform </span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x44</span><span class="p">;</span><span class="w">        </span><span class="c1">//</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x48</span><span class="p">;</span><span class="w">        </span><span class="c1">//</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x4C</span><span class="p">;</span><span class="w">        </span><span class="c1">//</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="p">};</span>
+</span></code></pre></div>
+<h3 id="unknown_names_12">unknown_names_12</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Are these the names of destroyable objects?</p>
+</div>
+<h3 id="unknown13">unknown13</h3>
+<h3 id="unknown18">unknown18</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These only appear in a couple chunkfiles around Saints HQ<br />
+See chunks numbered 93 and 106.</p>
+</div>
+<h3 id="unknown19">unknown19</h3>
+<h3 id="unknown20">unknown20</h3>
+<h3 id="unknown21">unknown21</h3>
+<h3 id="unknown22">unknown22</h3>
+<h3 id="unknown23">unknown23</h3>
+<h3 id="unknown24">unknown24</h3>
+<h3 id="unknown25">unknown25</h3>
+<h3 id="mesh_movers">mesh_movers</h3>
+<p>Count is found in the header.</p>
+<p>Mesh movers define simple animations for objects. They're used at least for:</p>
+<ul>
+<li>Doors</li>
+<li>Rotating ultorball in front of their skyscraper</li>
+<li>Skybox</li>
+</ul>
+<p>Names for movers and starts can be found a bit further: <a href=".#mesh_mover_names">#mesh_mover_names</a></p>
+<div class="language-yaml highlight"><span class="filename">KS</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">seq</span><span class="p">:</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mesh_movers</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mesh_mover</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">expr</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nt">repeat-expr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mesh_mover_count</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="nt">types</span><span class="p">:</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">  </span><span class="nt">mesh_mover</span><span class="p">:</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nt">seq</span><span class="p">:</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unk0</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">        </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">14</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_count</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">u2</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unk1</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">        </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
+</span></code></pre></div>
+<h3 id="unknown27">unknown27</h3>
+<p>Count is found in the header.</p>
+<h3 id="unknown28">unknown28</h3>
+<p>Count is found in the header.</p>
+<h3 id="unknown29">unknown29</h3>
+<p>Count is found in the header.</p>
+<h3 id="unknown30">unknown30</h3>
+<p>Count is found in the header.</p>
+<h3 id="unknown31">unknown31</h3>
+<p>Count is found in the header.</p>
+<h3 id="unknown32">unknown32</h3>
+<h3 id="mesh_mover_names">mesh_mover_names</h3>
+<p><a href=".#mesh_movers">#mesh_movers</a></p>
+<p>Just a bunch of c-strings. Nothing else.</p>
+<p>One entry contains: </p>
+<ul>
+<li>Name of the mesh mover</li>
+<li>Name of each "start" in the mover.</li>
+</ul>
+<div class="language-yaml highlight"><span class="filename">KS</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">seq</span><span class="p">:</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mesh_mover_names</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mesh_mover_name(</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">mesh_movers[_index].start_count</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">)</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">expr</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="nt">repeat-expr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mesh_mover_count</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">align(16)</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="nt">types</span><span class="p">:</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">  </span><span class="nt">mesh_mover_name</span><span class="p">:</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="nt">params</span><span class="p">:</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_count</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">u2</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="nt">seq</span><span class="p">:</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">strz</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_names</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">strz</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">        </span><span class="nt">repeat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">expr</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">        </span><span class="nt">repeat-expr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_count</span>
+</span></code></pre></div>
+<h3 id="lights">lights</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The layout up to this point is only 99% figured out. Sometimes the lights aren't there.<br />
+If <code>num_lights == 'MCHK'</code>, stop. This bubblegum fix will save you from parsing garbage on <em>almost</em> every chunk.</p>
+</div>
+<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">uint32_t</span><span class="w">    </span><span class="n">num_lights</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown26b</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">light</span><span class="w">       </span><span class="n">lights</span><span class="p">[</span><span class="n">num_lights</span><span class="p">]</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">strz</span><span class="w">        </span><span class="n">light_names</span><span class="w">         </span><span class="c1">//null terminated strings</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">align</span><span class="w"> </span><span class="mi">16</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="kt">float</span><span class="w">       </span><span class="n">light_unk2</span><span class="p">[]</span><span class="w">        </span><span class="c1">// times num_unk_floats for every light</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="n">align</span><span class="w"> </span><span class="mi">16</span>
+</span></code></pre></div>
+<div class="language-cpp highlight"><span class="filename">structs</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">light</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">flags</span><span class="p">;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x04</span><span class="p">;</span><span class="w">    </span><span class="c1">// always 0?</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="n">fl_vector</span><span class="w">   </span><span class="n">color</span><span class="p">;</span><span class="w">          </span><span class="c1">// RGB 3x float</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x14</span><span class="p">;</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x18</span><span class="p">;</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x1c</span><span class="p">;</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">num_unk_floats</span><span class="p">;</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x24</span><span class="p">;</span><span class="w">    </span><span class="c1">// always -1?</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x28</span><span class="p">;</span><span class="w">    </span><span class="c1">// Iggy&#39;s performance complaint</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x2c</span><span class="p">;</span><span class="w">    </span><span class="c1">// always -1?</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x30</span><span class="p">;</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x34</span><span class="p">;</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x38</span><span class="p">;</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">    </span><span class="n">fl_vector</span><span class="w">   </span><span class="n">origin</span><span class="p">;</span><span class="w">         </span><span class="c1">// XYZ 3x float</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">    </span><span class="n">fl_vector</span><span class="w">   </span><span class="n">xform_basis_x</span><span class="p">;</span><span class="w">  </span><span class="c1">// Basis X (probably)</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">    </span><span class="n">fl_vector</span><span class="w">   </span><span class="n">xform_basis_y</span><span class="p">;</span><span class="w">  </span><span class="c1">// Basis Y (probably)</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">    </span><span class="n">fl_vector</span><span class="w">   </span><span class="n">xform_basis_z</span><span class="p">;</span><span class="w">  </span><span class="c1">// Basis Z (probably)</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x6c</span><span class="p">;</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">unknown0x70</span><span class="p">;</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">radius_inner</span><span class="p">;</span><span class="w">   </span><span class="c1">// Light has full intensity until this distance</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">radius_outer</span><span class="p">;</span><span class="w">   </span><span class="c1">// </span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">    </span><span class="kt">float</span><span class="w">       </span><span class="n">render_dist</span><span class="p">;</span><span class="w">    </span><span class="c1">//</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">unknown0x80</span><span class="p">;</span><span class="w">    </span><span class="c1">// always -1?</span>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">     </span><span class="n">parent_idx</span><span class="p">;</span><span class="w">     </span><span class="c1">// -1 if none. Origin is relative to parent object, if set.</span>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x88</span><span class="p">;</span><span class="w">    </span><span class="c1">// </span>
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">unknown0x8c</span><span class="p">;</span><span class="w">    </span><span class="c1">//</span>
+</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w">    </span><span class="n">type</span><span class="p">;</span><span class="w">           </span><span class="c1">// ? maybe? Possible values: 0, 1, 2, 3</span>
+</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="p">};</span>
+</span></code></pre></div>
+<div class="language-cpp highlight"><span class="filename">Flags</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span><span class="c1">// These flags are present at least sometimes.</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="c1">// TODO: verify that there aren&#39;t more of them</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="c1">// The names of shadow / light flags were found in the game exe, are they</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="c1">// exposed to lua?</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="n">FLAG_UNKNOWN0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x8</span><span class="p">;</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="n">FLAG_UNKNOWN1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x10</span><span class="p">;</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="n">FLAG_UNKNOWN2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x20</span><span class="p">;</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="n">FLAG_UNKNOWN3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x40</span><span class="p">;</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span><span class="n">FLAG_UNKNOWN4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x80</span><span class="p">;</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="n">FLAG_LIGHT_LEVEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x100</span><span class="p">;</span><span class="w">       </span><span class="c1">// Cast light on static</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">    </span><span class="n">FLAG_LIGHT_CHARACTER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x200</span><span class="p">;</span><span class="w">   </span><span class="c1">// Cast light on characters and props</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">    </span><span class="n">FLAG_SHADOW_LEVEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x400</span><span class="p">;</span><span class="w">      </span><span class="c1">// Static meshes create shadows</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">    </span><span class="n">FLAG_SHADOW_CHARACTER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x800</span><span class="p">;</span><span class="w">  </span><span class="c1">// Characters and props create shadows</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">    </span><span class="n">FLAG_UNKNOWN9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x2000</span><span class="p">;</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">    </span><span class="n">FLAG_UNKNOWN10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x8000</span><span class="p">;</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">    </span><span class="n">FLAG_UNKNOWN11</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x20000</span><span class="p">;</span>
+</span></code></pre></div></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

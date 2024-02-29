@@ -1,0 +1,2268 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://saintsrowmods2.github.io/volition-docs/SR2/filelist/patch.vpp_pc/">
+      
+      
+        <link rel="prev" href="../music4.vpp_pc/">
+      
+      
+        <link rel="next" href="../pegs.vpp_pc/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>patch.vpp_pc - Volition File Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#patchvpp_pc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Volition File Docs" class="md-header__button md-logo" aria-label="Volition File Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Volition File Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              patch.vpp_pc
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Volition File Docs" class="md-nav__button md-logo" aria-label="Volition File Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Volition File Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">SR2</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="SR2" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          SR2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Filelist</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Filelist" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Filelist
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anims.vpp_pc/" class="md-nav__link">
+        anims.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audio.vpp_pc/" class="md-nav__link">
+        audio.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chunks1.vpp_pc/" class="md-nav__link">
+        chunks1.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chunks2.vpp_pc/" class="md-nav__link">
+        chunks2.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chunks3.vpp_pc/" class="md-nav__link">
+        chunks3.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chunks4.vpp_pc/" class="md-nav__link">
+        chunks4.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../city_load.vpp_pc/" class="md-nav__link">
+        city_load.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../common.vpp_pc/" class="md-nav__link">
+        common.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cutscenes.vpp_pc/" class="md-nav__link">
+        cutscenes.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hmaps.vpp_pc/" class="md-nav__link">
+        hmaps.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meshes.vpp_pc/" class="md-nav__link">
+        meshes.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../music1.vpp_pc/" class="md-nav__link">
+        music1.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../music2.vpp_pc/" class="md-nav__link">
+        music2.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../music3.vpp_pc/" class="md-nav__link">
+        music3.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../music4.vpp_pc/" class="md-nav__link">
+        music4.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          patch.vpp_pc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        patch.vpp_pc
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pegs.vpp_pc/" class="md-nav__link">
+        pegs.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preload.tbl/" class="md-nav__link">
+        preload.tbl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../textures.vpp_pc/" class="md-nav__link">
+        textures.vpp_pc
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../formats/">Formats</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Formats" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Formats
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formats/cityfiles/" class="md-nav__link">
+        Cityfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formats/cts/" class="md-nav__link">
+        CTS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formats/cvtf/" class="md-nav__link">
+        Vehicle Table
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formats/packfiles/" class="md-nav__link">
+        Packfiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formats/pegfiles/" class="md-nav__link">
+        Pegfiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formats/tables/" class="md-nav__link">
+        Tables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formats/vehicle/" class="md-nav__link">
+        Vehicles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3_9" type="checkbox" id="__nav_2_3_9" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../formats/chunks/">Chunks</a>
+          
+            <label for="__nav_2_3_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Chunks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          Chunks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formats/chunks/g_chunk_pc/" class="md-nav__link">
+        g_chunk_pc
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3_10" type="checkbox" id="__nav_2_3_10" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../formats/meshes/">Meshes</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Meshes" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_10">
+          <span class="md-nav__icon md-icon"></span>
+          Meshes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../lua/">Lua</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Lua" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Lua
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          SRIV
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SRIV" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          SRIV
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" tabindex="0" aria-expanded="false">
+          Formats
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Formats" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Formats
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRIV/formats/anim/" class="md-nav__link">
+        Animation Formats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRIV/formats/meshes/" class="md-nav__link">
+        Mesh Formats
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          SRTT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SRTT" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          SRTT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../SRTT/formats/">Formats</a>
+          
+            <label for="__nav_4_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Formats" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Formats
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/anim/" class="md-nav__link">
+        Animation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/common/" class="md-nav__link">
+        Common
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/meshes/" class="md-nav__link">
+        Meshes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/peg/" class="md-nav__link">
+        Pegfiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/vpp/" class="md-nav__link">
+        Packfiles and ASM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SRTT/formats/zone/" class="md-nav__link">
+        Zone files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../SRTT/lua/">Lua</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Lua" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Lua
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/cmesh2obj/" class="md-nav__link">
+        cmesh2obj
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/minimauls_tools/" class="md-nav__link">
+        Minimaul's tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/quantum_sr_zone_tools/" class="md-nav__link">
+        quantum_sr_zone_tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/sr2_chonker/" class="md-nav__link">
+        SR2 Chonker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/sr2chunkstexturetool/" class="md-nav__link">
+        SR2 ChunksTextureTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/sr2ctsmapper/" class="md-nav__link">
+        SR2 CTS Mapper
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/sr2pegtool/" class="md-nav__link">
+        SR2 PegTool
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="patchvpp_pc">patch.vpp_pc</h1>
+<div class="admonition note">
+<p class="admonition-title">File type</p>
+<p><a href="../../formats/packfiles">Packfile (<code>.vpp_pc</code>)</a></p>
+</div>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>ActivityCars.xtbl</li>
+<li>ActivityCrime.xtbl</li>
+<li>ActivityOther.xtbl</li>
+<li>activity_level.lua</li>
+<li>Activity_text.xtbl</li>
+<li>airport.lua</li>
+<li>ai_test.lua</li>
+<li>AOPrepass0_vso_pc.fxo_pc</li>
+<li>AOPrepass1_vso_pc.fxo_pc</li>
+<li>AOPrepass1_vso_pc_vtf.fxo_pc</li>
+<li>AOPrepass2_vso_pc.fxo_pc</li>
+<li>AOPrepass2_vso_pc_vtf.fxo_pc</li>
+<li>AOPrepass3_vso_pc.fxo_pc</li>
+<li>AOPrepass_pso_pc.fxo_pc</li>
+<li>apartments.lua</li>
+<li>arena.lua</li>
+<li>barrio.lua</li>
+<li>bb-additivedecal1_s.fxo_pc</li>
+<li>bb-blend1-ns_c.fxo_pc</li>
+<li>bb-blend1-ns_c_vtf.fxo_pc</li>
+<li>bb-blend1-ns_mc.fxo_pc</li>
+<li>bb-blend1-ns_mc_vtf.fxo_pc</li>
+<li>bb-blend1-ns_ms.fxo_pc</li>
+<li>bb-blend1-ns_s.fxo_pc</li>
+<li>bb-blend1_c.fxo_pc</li>
+<li>bb-blend1_c_vtf.fxo_pc</li>
+<li>bb-blend1_mc.fxo_pc</li>
+<li>bb-blend1_mc_vtf.fxo_pc</li>
+<li>bb-blend1_ms.fxo_pc</li>
+<li>bb-blend1_s.fxo_pc</li>
+<li>bb-blend2-ns_c.fxo_pc</li>
+<li>bb-blend2-ns_c_vtf.fxo_pc</li>
+<li>bb-blend2-ns_mc.fxo_pc</li>
+<li>bb-blend2-ns_mc_vtf.fxo_pc</li>
+<li>bb-blend2-ns_ms.fxo_pc</li>
+<li>bb-blend2-ns_s.fxo_pc</li>
+<li>bb-blend2_c.fxo_pc</li>
+<li>bb-blend2_c_vtf.fxo_pc</li>
+<li>bb-blend2_mc.fxo_pc</li>
+<li>bb-blend2_mc_vtf.fxo_pc</li>
+<li>bb-blend2_ms.fxo_pc</li>
+<li>bb-blend2_s.fxo_pc</li>
+<li>bb-blendsimple1_c.fxo_pc</li>
+<li>bb-blendsimple1_c_vtf.fxo_pc</li>
+<li>bb-blendsimple1_mc.fxo_pc</li>
+<li>bb-blendsimple1_mc_vtf.fxo_pc</li>
+<li>bb-blendsimple1_ms.fxo_pc</li>
+<li>bb-blendsimple1_s.fxo_pc</li>
+<li>bb-blendsimple2_c.fxo_pc</li>
+<li>bb-blendsimple2_c_vtf.fxo_pc</li>
+<li>bb-blendsimple2_mc.fxo_pc</li>
+<li>bb-blendsimple2_mc_vtf.fxo_pc</li>
+<li>bb-blendsimple2_ms.fxo_pc</li>
+<li>bb-blendsimple2_s.fxo_pc</li>
+<li>bb-blendsimple3_c.fxo_pc</li>
+<li>bb-blendsimple3_c_vtf.fxo_pc</li>
+<li>bb-blendsimple3_mc.fxo_pc</li>
+<li>bb-blendsimple3_mc_vtf.fxo_pc</li>
+<li>bb-blendsimple3_ms.fxo_pc</li>
+<li>bb-blendsimple3_s.fxo_pc</li>
+<li>bb-blendsimple4_c.fxo_pc</li>
+<li>bb-blendsimple4_c_vtf.fxo_pc</li>
+<li>bb-blendsimple4_mc.fxo_pc</li>
+<li>bb-blendsimple4_mc_vtf.fxo_pc</li>
+<li>bb-blendsimple4_ms.fxo_pc</li>
+<li>bb-blendsimple4_s.fxo_pc</li>
+<li>bb-carpaint1_c.fxo_pc</li>
+<li>bb-carpaint1_c_vtf.fxo_pc</li>
+<li>bb-carpaint1_mc.fxo_pc</li>
+<li>bb-carpaint1_mc_vtf.fxo_pc</li>
+<li>bb-carpaint1_ms.fxo_pc</li>
+<li>bb-carpaint1_s.fxo_pc</li>
+<li>bb-chrome1_c.fxo_pc</li>
+<li>bb-chrome1_c_vtf.fxo_pc</li>
+<li>bb-chrome1_mc.fxo_pc</li>
+<li>bb-chrome1_mc_vtf.fxo_pc</li>
+<li>bb-chrome1_ms.fxo_pc</li>
+<li>bb-chrome1_s.fxo_pc</li>
+<li>bb-cloth1_c.fxo_pc</li>
+<li>bb-cloth1_c_vtf.fxo_pc</li>
+<li>bb-cloth1_mc.fxo_pc</li>
+<li>bb-cloth1_mc_vtf.fxo_pc</li>
+<li>bb-cloth1_ms.fxo_pc</li>
+<li>bb-cloth1_s.fxo_pc</li>
+<li>bb-cloth2_c.fxo_pc</li>
+<li>bb-cloth2_c_vtf.fxo_pc</li>
+<li>bb-cloth2_mc.fxo_pc</li>
+<li>bb-cloth2_mc_vtf.fxo_pc</li>
+<li>bb-cloth2_ms.fxo_pc</li>
+<li>bb-cloth2_s.fxo_pc</li>
+<li>bb-clouds1_s.fxo_pc</li>
+<li>bb-decal1_ms.fxo_pc</li>
+<li>bb-decal1_s.fxo_pc</li>
+<li>bb-demofence1_s.fxo_pc</li>
+<li>bb-falloff1_c.fxo_pc</li>
+<li>bb-falloff1_c_vtf.fxo_pc</li>
+<li>bb-falloff1_mc.fxo_pc</li>
+<li>bb-falloff1_mc_vtf.fxo_pc</li>
+<li>bb-falloff1_ms.fxo_pc</li>
+<li>bb-falloff1_s.fxo_pc</li>
+<li>bb-flatreflect1_c.fxo_pc</li>
+<li>bb-flatreflect1_c_vtf.fxo_pc</li>
+<li>bb-flatreflect1_mc.fxo_pc</li>
+<li>bb-flatreflect1_mc_vtf.fxo_pc</li>
+<li>bb-flatreflect1_s.fxo_pc</li>
+<li>bb-floatingdecal1_ms.fxo_pc</li>
+<li>bb-floatingdecal1_s.fxo_pc</li>
+<li>bb-fresnelreflection1_c.fxo_pc</li>
+<li>bb-fresnelreflection1_c_vtf.fxo_pc</li>
+<li>bb-fresnelreflection1_mc.fxo_pc</li>
+<li>bb-fresnelreflection1_mc_vtf.fxo_pc</li>
+<li>bb-fresnelreflection1_ms.fxo_pc</li>
+<li>bb-fresnelreflection1_s.fxo_pc</li>
+<li>bb-glass1_c.fxo_pc</li>
+<li>bb-glass1_c_vtf.fxo_pc</li>
+<li>bb-glass1_mc.fxo_pc</li>
+<li>bb-glass1_mc_vtf.fxo_pc</li>
+<li>bb-glass1_ms.fxo_pc</li>
+<li>bb-glass1_s.fxo_pc</li>
+<li>bb-glass2_c.fxo_pc</li>
+<li>bb-glass2_c_vtf.fxo_pc</li>
+<li>bb-glass2_mc.fxo_pc</li>
+<li>bb-glass2_mc_vtf.fxo_pc</li>
+<li>bb-glass2_ms.fxo_pc</li>
+<li>bb-glass2_s.fxo_pc</li>
+<li>bb-glass3_c.fxo_pc</li>
+<li>bb-glass3_c_vtf.fxo_pc</li>
+<li>bb-glass3_mc.fxo_pc</li>
+<li>bb-glass3_mc_vtf.fxo_pc</li>
+<li>bb-glass3_ms.fxo_pc</li>
+<li>bb-glass3_s.fxo_pc</li>
+<li>bb-heatdistortion1_s.fxo_pc</li>
+<li>bb-kennygrass1_s.fxo_pc</li>
+<li>bb-lightcover1_c.fxo_pc</li>
+<li>bb-lightcover1_c_vtf.fxo_pc</li>
+<li>bb-lightcover1_mc.fxo_pc</li>
+<li>bb-lightcover1_mc_vtf.fxo_pc</li>
+<li>bb-lightcover1_ms.fxo_pc</li>
+<li>bb-lightcover1_s.fxo_pc</li>
+<li>bb-makeup1_c.fxo_pc</li>
+<li>bb-makeup1_c_vtf.fxo_pc</li>
+<li>bb-makeup1_mc.fxo_pc</li>
+<li>bb-makeup1_mc_vtf.fxo_pc</li>
+<li>bb-moon_s.fxo_pc</li>
+<li>bb-nclouds_s.fxo_pc</li>
+<li>bb-norender_c.fxo_pc</li>
+<li>bb-norender_c_vtf.fxo_pc</li>
+<li>bb-norender_mc.fxo_pc</li>
+<li>bb-norender_mc_vtf.fxo_pc</li>
+<li>bb-norender_ms.fxo_pc</li>
+<li>bb-norender_s.fxo_pc</li>
+<li>bb-parallax1_c.fxo_pc</li>
+<li>bb-parallax1_c_vtf.fxo_pc</li>
+<li>bb-parallax1_mc.fxo_pc</li>
+<li>bb-parallax1_mc_vtf.fxo_pc</li>
+<li>bb-parallax1_ms.fxo_pc</li>
+<li>bb-parallax1_s.fxo_pc</li>
+<li>bb-raincone-single.fxo_pc</li>
+<li>bb-raincone.fxo_pc</li>
+<li>bb-shorewaves1_s.fxo_pc</li>
+<li>bb-shorewaves2_s.fxo_pc</li>
+<li>bb-shorewaves3_s.fxo_pc</li>
+<li>bb-simple1_c.fxo_pc</li>
+<li>bb-simple1_c_vtf.fxo_pc</li>
+<li>bb-simple1_mc.fxo_pc</li>
+<li>bb-simple1_mc_vtf.fxo_pc</li>
+<li>bb-simple1_ms.fxo_pc</li>
+<li>bb-simple1_s.fxo_pc</li>
+<li>bb-simple2_ms.fxo_pc</li>
+<li>bb-simple2_s.fxo_pc</li>
+<li>bb-simple3_c.fxo_pc</li>
+<li>bb-simple3_c_vtf.fxo_pc</li>
+<li>bb-simple3_mc.fxo_pc</li>
+<li>bb-simple3_mc_vtf.fxo_pc</li>
+<li>bb-simple3_ms.fxo_pc</li>
+<li>bb-simple3_s.fxo_pc</li>
+<li>bb-simpledecal1_c.fxo_pc</li>
+<li>bb-simpledecal1_c_vtf.fxo_pc</li>
+<li>bb-simpledecal1_mc.fxo_pc</li>
+<li>bb-simpledecal1_mc_vtf.fxo_pc</li>
+<li>bb-simpledecal1_ms.fxo_pc</li>
+<li>bb-simpledecal1_s.fxo_pc</li>
+<li>bb-simplediffusedecal_c.fxo_pc</li>
+<li>bb-simplediffusedecal_c_vtf.fxo_pc</li>
+<li>bb-simplediffusedecal_mc.fxo_pc</li>
+<li>bb-simplediffusedecal_mc_vtf.fxo_pc</li>
+<li>bb-simplediffusedecal_ms.fxo_pc</li>
+<li>bb-simplediffusedecal_s.fxo_pc</li>
+<li>bb-simpleflat_c.fxo_pc</li>
+<li>bb-simpleflat_c_vtf.fxo_pc</li>
+<li>bb-simpleflat_mc.fxo_pc</li>
+<li>bb-simpleflat_mc_vtf.fxo_pc</li>
+<li>bb-simpleflat_ms.fxo_pc</li>
+<li>bb-simpleflat_s.fxo_pc</li>
+<li>bb-simplelit_c.fxo_pc</li>
+<li>bb-simplelit_c_vtf.fxo_pc</li>
+<li>bb-simplelit_mc.fxo_pc</li>
+<li>bb-simplelit_mc_vtf.fxo_pc</li>
+<li>bb-simplelit_ms.fxo_pc</li>
+<li>bb-simplelit_s.fxo_pc</li>
+<li>bb-skydome1_s.fxo_pc</li>
+<li>bb-standard-ns_c.fxo_pc</li>
+<li>bb-standard-ns_c_vtf.fxo_pc</li>
+<li>bb-standard-ns_mc.fxo_pc</li>
+<li>bb-standard-ns_mc_vtf.fxo_pc</li>
+<li>bb-standard-ns_ms.fxo_pc</li>
+<li>bb-standard-ns_s.fxo_pc</li>
+<li>bb-standard_c.fxo_pc</li>
+<li>bb-standard_c_vtf.fxo_pc</li>
+<li>bb-standard_mc.fxo_pc</li>
+<li>bb-standard_mc_vtf.fxo_pc</li>
+<li>bb-standard_ms.fxo_pc</li>
+<li>bb-standard_s.fxo_pc</li>
+<li>bb-stars1_s.fxo_pc</li>
+<li>bb-street1_s.fxo_pc</li>
+<li>bb-streetsimple1_c.fxo_pc</li>
+<li>bb-streetsimple1_c_vtf.fxo_pc</li>
+<li>bb-streetsimple1_mc.fxo_pc</li>
+<li>bb-streetsimple1_mc_vtf.fxo_pc</li>
+<li>bb-streetsimple1_ms.fxo_pc</li>
+<li>bb-streetsimple1_s.fxo_pc</li>
+<li>bb-sun1_s.fxo_pc</li>
+<li>bb-sunglow1_s.fxo_pc</li>
+<li>bb-tagging1_s.fxo_pc</li>
+<li>bb-tattoo1_c.fxo_pc</li>
+<li>bb-tattoo1_c_vtf.fxo_pc</li>
+<li>bb-tattoo1_mc.fxo_pc</li>
+<li>bb-tattoo1_mc_vtf.fxo_pc</li>
+<li>bb-terrain1-ns_s.fxo_pc</li>
+<li>bb-terrain1_s.fxo_pc</li>
+<li>bb-tod-window1_s.fxo_pc</li>
+<li>bb-tod-window3_s.fxo_pc</li>
+<li>bb-tod-window4_c.fxo_pc</li>
+<li>bb-tod-window4_c_vtf.fxo_pc</li>
+<li>bb-tod-window4_mc.fxo_pc</li>
+<li>bb-tod-window4_mc_vtf.fxo_pc</li>
+<li>bb-tod-window4_ms.fxo_pc</li>
+<li>bb-tod-window4_s.fxo_pc</li>
+<li>bb-treeleaves_s.fxo_pc</li>
+<li>bb-treetrunk_s.fxo_pc</li>
+<li>bb-vfxadditive1_ms.fxo_pc</li>
+<li>bb-vfxadditive1_s.fxo_pc</li>
+<li>bb-water1_s.fxo_pc</li>
+<li>bb_part_distort_pb.fxo_pc</li>
+<li>bb_part_distort_pd.fxo_pc</li>
+<li>bb_part_distort_pr.fxo_pc</li>
+<li>bb_part_nmap_additive_pb.fxo_pc</li>
+<li>bb_part_nmap_additive_pd.fxo_pc</li>
+<li>bb_part_nmap_additive_pr.fxo_pc</li>
+<li>bb_part_nmap_pb.fxo_pc</li>
+<li>bb_part_nmap_pd.fxo_pc</li>
+<li>bb_part_nmap_pr.fxo_pc</li>
+<li>bb_part_standard_additive_pb.fxo_pc</li>
+<li>bb_part_standard_additive_pd.fxo_pc</li>
+<li>bb_part_standard_additive_pr.fxo_pc</li>
+<li>bb_part_standard_pb.fxo_pc</li>
+<li>bb_part_standard_pd.fxo_pc</li>
+<li>bb_part_standard_pr.fxo_pc</li>
+<li>bh01.lua</li>
+<li>bh02.lua</li>
+<li>bh03.lua</li>
+<li>bh04.lua</li>
+<li>bh05.lua</li>
+<li>bh06.lua</li>
+<li>bh07.lua</li>
+<li>bh08.lua</li>
+<li>bh09.lua</li>
+<li>bh10.lua</li>
+<li>bh11.lua</li>
+<li>bink_video.fxo_pc</li>
+<li>building_purchase.lua</li>
+<li>camera_motion_blur.fxo_pc</li>
+<li>cdl01.lua</li>
+<li>cellphone.lua</li>
+<li>CellPhone_text.xtbl</li>
+<li>charlist_CH.txt</li>
+<li>charlist_CZ.txt</li>
+<li>charlist_JP.txt</li>
+<li>charlist_PL.txt</li>
+<li>charlist_RU.txt</li>
+<li>charlist_SK.txt</li>
+<li>Cheats_text.xtbl</li>
+<li>chinatown.lua</li>
+<li>city_load.lua</li>
+<li>clothing_store.lua</li>
+<li>CombineAO_pso_pc.fxo_pc</li>
+<li>CombineAO_vso_pc.fxo_pc</li>
+<li>completion.lua</li>
+<li>Controls_text.xtbl</li>
+<li>coop_test.lua</li>
+<li>credits.lua</li>
+<li>credits.xtbl</li>
+<li>crib_cust.lua</li>
+<li>cte_news6.lua</li>
+<li>cte_sniper_rifle.lua</li>
+<li>ctx1_compress_c.fxo_pc</li>
+<li>ctx1_compress_mc.fxo_pc</li>
+<li>ctx1_compress_ms.fxo_pc</li>
+<li>ctx1_compress_s.fxo_pc</li>
+<li>CT_01.txt</li>
+<li>CT_02.txt</li>
+<li>CT_03.txt</li>
+<li>CT_04.txt</li>
+<li>CT_05.txt</li>
+<li>cube_map_render_s.fxo_pc</li>
+<li>CustCAT.xtbl</li>
+<li>CustHair.xtbl</li>
+<li>CustItem.xtbl</li>
+<li>customization_items.xtbl</li>
+<li>CustPlayerOther.xtbl</li>
+<li>CustVar.xtbl</li>
+<li>CustVehicleColors.xtbl</li>
+<li>CustVehicleColorSlots.xtbl</li>
+<li>CustVehicleComponents.xtbl</li>
+<li>CustVehicleOther.xtbl</li>
+<li>CustVehiclePaints.xtbl</li>
+<li>CustVehicleSlots.xtbl</li>
+<li>CustWear.xtbl</li>
+<li>cutscene_test.lua</li>
+<li>cutscene_tv.lua</li>
+<li>demo_derby.lua</li>
+<li>depth_of_field.fxo_pc</li>
+<li>dialog_box.lua</li>
+<li>distortion_tint_desat.fxo_pc</li>
+<li>docks.lua</li>
+<li>downtown.lua</li>
+<li>em01.lua</li>
+<li>em02.lua</li>
+<li>ep01.lua</li>
+<li>ep02.lua</li>
+<li>ep03.lua</li>
+<li>ep04.lua</li>
+<li>factories.lua</li>
+<li>fb_road_heat_distortion.fxo_pc</li>
+<li>fnt_chinese.g_peg_pc</li>
+<li>fnt_chinese.vf3_pc</li>
+<li>fr_checkAI.lua</li>
+<li>fr_checkAP.lua</li>
+<li>fr_checkAR.lua</li>
+<li>fr_checkBA.lua</li>
+<li>fr_checkCT.lua</li>
+<li>fr_checkDK.lua</li>
+<li>fr_checkDT.lua</li>
+<li>fr_checkFA.lua</li>
+<li>fr_checkHE.lua</li>
+<li>fr_checkMA.lua</li>
+<li>fr_checkMU.lua</li>
+<li>fr_checkPR.lua</li>
+<li>fr_checkSE.lua</li>
+<li>fr_checkSR.lua</li>
+<li>fr_checkSU.lua</li>
+<li>fr_checkTY.lua</li>
+<li>fullscreen_quad.fxo_pc</li>
+<li>gang_cust.lua</li>
+<li>Gang_Names.xtbl</li>
+<li>garage.lua</li>
+<li>glow_blur.fxo_pc</li>
+<li>gmb_blackjack.lua</li>
+<li>gmb_poker.lua</li>
+<li>GML1_MG_Finsh1_A.anim_pc</li>
+<li>GML1_MG_Finsh1_B.anim_pc</li>
+<li>GML1_MG_Finsh2_A.anim_pc</li>
+<li>GML1_MG_Finsh2_B.anim_pc</li>
+<li>GML1_MG_Finsh3_A.anim_pc</li>
+<li>GML1_MG_Finsh3_B.anim_pc</li>
+<li>hdr_bloom_glow_composite.fxo_pc</li>
+<li>hdr_tint_desat.fxo_pc</li>
+<li>HelpText.xtbl</li>
+<li>highend.lua</li>
+<li>Hoods.xtbl</li>
+<li>HorizonSSAOHigh_pso_pc.fxo_pc</li>
+<li>HorizonSSAO_pso_pc.fxo_pc</li>
+<li>HorizonSSAO_vso_pc.fxo_pc</li>
+<li>hotels.lua</li>
+<li>hud.lua</li>
+<li>hud_btnmash.lua</li>
+<li>hud_coop_div.lua</li>
+<li>hud_demo_derby.lua</li>
+<li>hud_gsi.lua</li>
+<li>hud_healthbars.lua</li>
+<li>hud_mayhem.lua</li>
+<li>hud_mp_hud.lua</li>
+<li>hud_msg.lua</li>
+<li>hud_multi_prototype.lua</li>
+<li>hud_race_start.lua</li>
+<li>hud_reticules.lua</li>
+<li>HUD_text.xtbl</li>
+<li>hud_touch_combo.lua</li>
+<li>hud_zombie.lua</li>
+<li>Item_text.xtbl</li>
+<li>jap.g_peg_pc</li>
+<li>jap.vf3_pc</li>
+<li>JPCharList.txt</li>
+<li>Linearz_pso_pc.fxo_pc</li>
+<li>Linearz_vso_pc.fxo_pc</li>
+<li>liquor_store.lua</li>
+<li>LooksStores_text.xtbl</li>
+<li>main_menu.lua</li>
+<li>Menus_text.xtbl</li>
+<li>menu_base.lua</li>
+<li>menu_gambling_poker.lua</li>
+<li>menu_style_dialog.lua</li>
+<li>MissionText.xtbl</li>
+<li>mission_globals.lua</li>
+<li>mission_replay.lua</li>
+<li>mm_wireless.lua</li>
+<li>mp_completion.lua</li>
+<li>mp_hud.lua</li>
+<li>mp_hud_lobby.lua</li>
+<li>mp_leaderboards.lua</li>
+<li>mp_lobby_players.lua</li>
+<li>mp_match_load.lua</li>
+<li>mp_player_info_popup.lua</li>
+<li>mp_scoreboard.lua</li>
+<li>mp_server_browser.lua</li>
+<li>mp_server_browser.vint_doc</li>
+<li>MultiGames_text.xtbl</li>
+<li>MultiMenu_text.xtbl</li>
+<li>MultiStats.xtbl</li>
+<li>MultiTemp.xtbl</li>
+<li>MultiTemp_text.xtbl</li>
+<li>multi_pause_menu.lua</li>
+<li>museum.lua</li>
+<li>music_store.lua</li>
+<li>normal_map_blend.fxo_pc</li>
+<li>nuke.lua</li>
+<li>pause_map.lua</li>
+<li>pause_menu.lua</li>
+<li>pcr01.lua</li>
+<li>PC_text.xtbl</li>
+<li>platform_pc_CH.le_strings</li>
+<li>platform_PC_CZ.le_strings</li>
+<li>platform_PC_DE.le_strings</li>
+<li>platform_PC_DK.le_strings</li>
+<li>platform_PC_ES.le_strings</li>
+<li>platform_PC_FR.le_strings</li>
+<li>platform_PC_IT.le_strings</li>
+<li>platform_PC_JP.le_strings</li>
+<li>platform_PC_NL.le_strings</li>
+<li>platform_PC_PL.le_strings</li>
+<li>platform_pc_RU.le_strings</li>
+<li>platform_PC_SE.le_strings</li>
+<li>platform_PC_US.le_strings</li>
+<li>PlayerCreation_text.xtbl</li>
+<li>pp-distancefog_s.fxo_pc</li>
+<li>prison.lua</li>
+<li>projects.lua</li>
+<li>PS3_text.xtbl</li>
+<li>random_png.fxo_pc</li>
+<li>redlight.lua</li>
+<li>reduce_texture.fxo_pc</li>
+<li>reduce_texture_hdr.fxo_pc</li>
+<li>rn01.lua</li>
+<li>rn02.lua</li>
+<li>rn03.lua</li>
+<li>rn04.lua</li>
+<li>rn05.lua</li>
+<li>rn06.lua</li>
+<li>rn07.lua</li>
+<li>rn08.lua</li>
+<li>rn09.lua</li>
+<li>rn10.lua</li>
+<li>rn11.lua</li>
+<li>saintsrow.lua</li>
+<li>shadow_combiner.fxo_pc</li>
+<li>shadow_combiner_df16.fxo_pc</li>
+<li>shadow_combiner_df24.fxo_pc</li>
+<li>shadow_combiner_intz.fxo_pc</li>
+<li>shadow_combiner_rawz.fxo_pc</li>
+<li>sh_bh_airport.lua</li>
+<li>sh_bh_apartments.lua</li>
+<li>sh_bh_chinatown.lua</li>
+<li>sh_bh_docks.lua</li>
+<li>sh_rn_museum_pier.lua</li>
+<li>sh_rn_rec_center.lua</li>
+<li>sh_rn_sciencemuseum.lua</li>
+<li>sh_rn_stripclub.lua</li>
+<li>sh_ss_crackhouse.lua</li>
+<li>sh_ss_fishingdock.lua</li>
+<li>sh_ss_student_union.lua</li>
+<li>sh_ss_trailerpark.lua</li>
+<li>sh_tss_caverns.lua</li>
+<li>sh_tss_ugmall.lua</li>
+<li>SlotsGameMachines.txt</li>
+<li>Split_text.xtbl</li>
+<li>sr-simpletwotonediffuse_c.fxo_pc</li>
+<li>sr-simpletwotonediffuse_c_vtf.fxo_pc</li>
+<li>sr-simpletwotonediffuse_mc.fxo_pc</li>
+<li>sr-simpletwotonediffuse_mc_vtf.fxo_pc</li>
+<li>sr-simpletwotonediffuse_ms.fxo_pc</li>
+<li>sr-simpletwotonediffuse_s.fxo_pc</li>
+<li>sr-twotonediffuse_c.fxo_pc</li>
+<li>sr-twotonediffuse_c_vtf.fxo_pc</li>
+<li>sr-twotonediffuse_mc.fxo_pc</li>
+<li>sr-twotonediffuse_mc_vtf.fxo_pc</li>
+<li>sr-twotonediffuse_ms.fxo_pc</li>
+<li>sr-twotonediffuse_s.fxo_pc</li>
+<li>sr2-al-ground-simplediffuse_s.fxo_pc</li>
+<li>sr2-al-ground-simplettdiffuse_s.fxo_pc</li>
+<li>sr2-al-ground-simple_s.fxo_pc</li>
+<li>sr2-arch_light_s.fxo_pc</li>
+<li>sr2-bink1_c.fxo_pc</li>
+<li>sr2-bink1_c_vtf.fxo_pc</li>
+<li>sr2-bink1_mc.fxo_pc</li>
+<li>sr2-bink1_mc_vtf.fxo_pc</li>
+<li>sr2-bink1_s.fxo_pc</li>
+<li>sr2-cardiffuse1_ms.fxo_pc</li>
+<li>sr2-cardiffuse1_s.fxo_pc</li>
+<li>sr2-carpaint1_ms.fxo_pc</li>
+<li>sr2-carpaint1_s.fxo_pc</li>
+<li>sr2-carpaintsimple1_ms.fxo_pc</li>
+<li>sr2-carpaintsimple1_s.fxo_pc</li>
+<li>sr2-carsimple1_ms.fxo_pc</li>
+<li>sr2-carsimple1_s.fxo_pc</li>
+<li>sr2-distantpedestrian1_c.fxo_pc</li>
+<li>sr2-distantpedestrian1_c_vtf.fxo_pc</li>
+<li>sr2-distantpedestrian1_mc.fxo_pc</li>
+<li>sr2-distantpedestrian1_mc_vtf.fxo_pc</li>
+<li>sr2-distantpedestrian1_ms.fxo_pc</li>
+<li>sr2-distantpedestrian1_s.fxo_pc</li>
+<li>sr2-distantvehicle1_c.fxo_pc</li>
+<li>sr2-distantvehicle1_c_vtf.fxo_pc</li>
+<li>sr2-distantvehicle1_ms.fxo_pc</li>
+<li>sr2-distantvehicle1_s.fxo_pc</li>
+<li>sr2-hair2_c.fxo_pc</li>
+<li>sr2-hair2_c_vtf.fxo_pc</li>
+<li>sr2-hair2_mc.fxo_pc</li>
+<li>sr2-hair2_mc_vtf.fxo_pc</li>
+<li>sr2-hair2_ms.fxo_pc</li>
+<li>sr2-hair2_s.fxo_pc</li>
+<li>sr2-hair3_c.fxo_pc</li>
+<li>sr2-hair3_c_vtf.fxo_pc</li>
+<li>sr2-hair3_mc.fxo_pc</li>
+<li>sr2-hair3_mc_vtf.fxo_pc</li>
+<li>sr2-hair3_ms.fxo_pc</li>
+<li>sr2-hair3_s.fxo_pc</li>
+<li>sr2-headlightglare1_s.fxo_pc</li>
+<li>sr2-illumscroll1_c.fxo_pc</li>
+<li>sr2-illumscroll1_c_vtf.fxo_pc</li>
+<li>sr2-illumscroll1_mc.fxo_pc</li>
+<li>sr2-illumscroll1_mc_vtf.fxo_pc</li>
+<li>sr2-illumscroll1_ms.fxo_pc</li>
+<li>sr2-illumscroll1_s.fxo_pc</li>
+<li>sr2-mptagging_c.fxo_pc</li>
+<li>sr2-mptagging_c_vtf.fxo_pc</li>
+<li>sr2-mptagging_mc.fxo_pc</li>
+<li>sr2-mptagging_mc_vtf.fxo_pc</li>
+<li>sr2-mptagging_ms.fxo_pc</li>
+<li>sr2-mptagging_s.fxo_pc</li>
+<li>sr2-pixelate_c.fxo_pc</li>
+<li>sr2-pixelate_c_vtf.fxo_pc</li>
+<li>sr2-pixelate_mc.fxo_pc</li>
+<li>sr2-pixelate_mc_vtf.fxo_pc</li>
+<li>sr2-pixelate_ms.fxo_pc</li>
+<li>sr2-pixelate_s.fxo_pc</li>
+<li>sr2-rampingdecal1_ms.fxo_pc</li>
+<li>sr2-rampingdecal1_s.fxo_pc</li>
+<li>sr2-simple-tod-window3_s.fxo_pc</li>
+<li>sr2-simple-tod-window4_c.fxo_pc</li>
+<li>sr2-simple-tod-window4_c_vtf.fxo_pc</li>
+<li>sr2-simple-tod-window4_mc.fxo_pc</li>
+<li>sr2-simple-tod-window4_mc_vtf.fxo_pc</li>
+<li>sr2-simple-tod-window4_ms.fxo_pc</li>
+<li>sr2-simple-tod-window4_s.fxo_pc</li>
+<li>sr2-simplediffuse1_c.fxo_pc</li>
+<li>sr2-simplediffuse1_c_vtf.fxo_pc</li>
+<li>sr2-simplediffuse1_mc.fxo_pc</li>
+<li>sr2-simplediffuse1_mc_vtf.fxo_pc</li>
+<li>sr2-simplediffuse1_ms.fxo_pc</li>
+<li>sr2-simplediffuse1_s.fxo_pc</li>
+<li>sr2-simplescroll1_c.fxo_pc</li>
+<li>sr2-simplescroll1_c_vtf.fxo_pc</li>
+<li>sr2-simplescroll1_mc.fxo_pc</li>
+<li>sr2-simplescroll1_mc_vtf.fxo_pc</li>
+<li>sr2-simplescroll1_ms.fxo_pc</li>
+<li>sr2-simplescroll1_s.fxo_pc</li>
+<li>sr2-simplesign_c.fxo_pc</li>
+<li>sr2-simplesign_c_vtf.fxo_pc</li>
+<li>sr2-simplesign_mc.fxo_pc</li>
+<li>sr2-simplesign_mc_vtf.fxo_pc</li>
+<li>sr2-simplesign_ms.fxo_pc</li>
+<li>sr2-simplesign_s.fxo_pc</li>
+<li>sr2-simplespecular_c.fxo_pc</li>
+<li>sr2-simplespecular_c_vtf.fxo_pc</li>
+<li>sr2-simplespecular_mc.fxo_pc</li>
+<li>sr2-simplespecular_mc_vtf.fxo_pc</li>
+<li>sr2-simplespecular_ms.fxo_pc</li>
+<li>sr2-simplespecular_s.fxo_pc</li>
+<li>sr2-skin1_c.fxo_pc</li>
+<li>sr2-skin1_c_vtf.fxo_pc</li>
+<li>sr2-skin1_mc.fxo_pc</li>
+<li>sr2-skin1_mc_vtf.fxo_pc</li>
+<li>sr2-skyboxclouds1_s.fxo_pc</li>
+<li>sr2-skyboxmountains1_s.fxo_pc</li>
+<li>sr2-skydome2_s.fxo_pc</li>
+<li>sr2-twotonediffusedecal_c.fxo_pc</li>
+<li>sr2-twotonediffusedecal_c_vtf.fxo_pc</li>
+<li>sr2-twotonediffusedecal_mc.fxo_pc</li>
+<li>sr2-twotonediffusedecal_mc_vtf.fxo_pc</li>
+<li>sr2-twotonediffusedecal_ms.fxo_pc</li>
+<li>sr2-twotonediffusedecal_s.fxo_pc</li>
+<li>sr2-vanityplate_c.fxo_pc</li>
+<li>sr2-vanityplate_c_vtf.fxo_pc</li>
+<li>sr2-vanityplate_mc.fxo_pc</li>
+<li>sr2-vanityplate_mc_vtf.fxo_pc</li>
+<li>sr2-vanityplate_ms.fxo_pc</li>
+<li>sr2-vanityplate_s.fxo_pc</li>
+<li>sr2-water3_s.fxo_pc</li>
+<li>sr2-wavekiller1.fxo_pc</li>
+<li>sr2-weaponglow_c.fxo_pc</li>
+<li>sr2-weaponglow_c_vtf.fxo_pc</li>
+<li>sr2-weaponglow_mc.fxo_pc</li>
+<li>sr2-weaponglow_mc_vtf.fxo_pc</li>
+<li>sr2-weaponglow_ms.fxo_pc</li>
+<li>sr2-weaponglow_s.fxo_pc</li>
+<li>sr2-window_glare1_ms.fxo_pc</li>
+<li>sr2-window_glare1_s.fxo_pc</li>
+<li>SR2_Activity_text.xtbl</li>
+<li>sr2_chunk079.chunk_pc</li>
+<li>sr2_city.lua</li>
+<li>SR2_Depreciated_text.xtbl</li>
+<li>SR2_Diversion_text.xtbl</li>
+<li>SR2_Escort_names.xtbl</li>
+<li>SR2_HUD_text.xtbl</li>
+<li>SR2_Locations.xtbl</li>
+<li>sr2_meshlibrary.ml_list.txt</li>
+<li>SR2_missions.xtbl</li>
+<li>SR2_text.xtbl</li>
+<li>ss01.lua</li>
+<li>ss02.lua</li>
+<li>ss03.lua</li>
+<li>ss04.lua</li>
+<li>ss05.lua</li>
+<li>ss06.lua</li>
+<li>ss07.lua</li>
+<li>ss08.lua</li>
+<li>ss09.lua</li>
+<li>ss10.lua</li>
+<li>ss11.lua</li>
+<li>ss_grid.lua</li>
+<li>static_CH.le_strings</li>
+<li>static_CZ.le_strings</li>
+<li>static_DE.le_strings</li>
+<li>static_DK.le_strings</li>
+<li>static_ES.le_strings</li>
+<li>static_FR.le_strings</li>
+<li>static_IT.le_strings</li>
+<li>static_JP.le_strings</li>
+<li>static_NL.le_strings</li>
+<li>static_PL.le_strings</li>
+<li>static_RU.le_strings</li>
+<li>static_SE.le_strings</li>
+<li>static_US.le_strings</li>
+<li>Stats_text.xtbl</li>
+<li>stencilshadow_cpu_c.fxo_pc</li>
+<li>stencilshadow_cpu_mc.fxo_pc</li>
+<li>stencilshadow_cpu_ms.fxo_pc</li>
+<li>stencilshadow_cpu_s.fxo_pc</li>
+<li>stencil_opt_s.fxo_pc</li>
+<li>StoreExports.xtbl</li>
+<li>Stores_text.xtbl</li>
+<li>Story_text.xtbl</li>
+<li>stronghold_globals.lua</li>
+<li>subexp.lua</li>
+<li>suburbs.lua</li>
+<li>system_lib.lua</li>
+<li>tagging_interface.fxo_pc</li>
+<li>television.lua</li>
+<li>tint_desat.fxo_pc</li>
+<li>trailerpark.lua</li>
+<li>truckyard.lua</li>
+<li>tss01.lua</li>
+<li>tss02.lua</li>
+<li>tss03.lua</li>
+<li>tss03_demo.lua</li>
+<li>tss04.lua</li>
+<li>tutorial.lua</li>
+<li>tutorial.xtbl</li>
+<li>tutorial_subtitles.lua</li>
+<li>ug_lib.lua</li>
+<li>ultor_base.lua</li>
+<li>underground.lua</li>
+<li>university.lua</li>
+<li>Unlock_text.xtbl</li>
+<li>Unlock_text_old.xtbl</li>
+<li>usability1.lua</li>
+<li>usability2.lua</li>
+<li>vehicle_cust.lua</li>
+<li>vint_lib.lua</li>
+<li>voice_script_CH.le_strings</li>
+<li>voice_script_CZ.le_strings</li>
+<li>voice_script_DE.le_strings</li>
+<li>voice_script_DK.le_strings</li>
+<li>voice_script_ES.le_strings</li>
+<li>voice_script_FR.le_strings</li>
+<li>voice_script_IT.le_strings</li>
+<li>voice_script_JP.le_strings</li>
+<li>voice_script_NL.le_strings</li>
+<li>voice_script_PL.le_strings</li>
+<li>voice_script_RU.le_strings</li>
+<li>voice_script_SE.le_strings</li>
+<li>Voice_Script_text.xtbl</li>
+<li>voice_script_US.le_strings</li>
+<li>water_normal_map_composite.fxo_pc</li>
+<li>water_normal_map_gen.fxo_pc</li>
+<li>water_physics.fxo_pc</li>
+<li>water_physics_detail.fxo_pc</li>
+<li>water_simulation_composite.fxo_pc</li>
+<li>weapon_store.lua</li>
+<li>Weather_text.xtbl</li>
+<li>xbox360_text.xtbl</li>
+<li>XLASTText.xtbl</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes"], "search": "../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

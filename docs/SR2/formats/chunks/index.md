@@ -100,7 +100,6 @@ int32_t     num_textures;               //
 uint32_t    padding[num_textures];      //
 char        texture_names[num_textures];//
 align 16                                //
-
 ```
 The objects are split into two structs, located very far apart in the file. The second part is found at [#objects](.#objects).
 Some of these transforms are left unused by objects.
@@ -204,57 +203,20 @@ public struct object_unknown4 {
 ```
 ### static_collision
 
-!!! note "links"
+??? note "links"
     _Some_ knowledge of havok collisions: [https://niftools.sourceforge.net/wiki/Nif_Format/Mopp](https://niftools.sourceforge.net/wiki/Nif_Format/Mopp)
 
-Collision for all static objects in a chunk seem to be baked into one Havok collision blob. This is inherently unmoddable, unless some genius comes forward and figures out Havok collisions. Look up Havok MOPP for some info from other mod scenes, though there isn't much.
+It appears that the static meshes of the entire chunk are baked into one Havok collsion blob. This is inherently unmoddable, unless some genius comes and figures out Havok collisions.
 
-The vertices seem to match GPU models.
+The vertices seem to match visual models.
 
 
 ### model_buffer_headers
-Defines vertex and index buffers in both `.chunk_pc` and `.g_chunk_pc`.
-``` cpp
-    
-    model_buffer_header     []
-    model_v_buffer_header   [] // times num_v_buffers for each model_buffer_header
 
-``` 
-
-``` cpp title="structs"
-// "CPU model" is stored in this file (.chunk_pc). Probably used for loose object collision.
-// "GPU model" is stored in this .g_chunk
-
-// One big shared one for g_chunk and many individual model buffers for cpu chunk
-// size: 0x14
-struct model_buffer_header {
-    int16_t     type;           // Either 7 or 0? 7 is CPU, 0 GPU.
-    int16_t     num_v_buffers;  // Always 1 for CPU
-    int32_t     num_indices;    //
-    int32_t     unknown0x08;    // always -1
-    int32_t     unknown0x0c;    // always -1
-    int32_t     unknown0x10;    // always 0
-}
-
-// Defines a vertex buffer.
-// The model_buffer_header for g_chunk contains many v buffers, one for each combination of num_unk2b and num_uvs used in the chunk.
-// size: 0x10
-struct model_v_buffer_header {
-    uint8_t     num_unk2b;      // Number of whatever this data is in a vertex. Adds 2B to vert size each. Always 0 on CPU
-    uint8_t     num_uvs;        // Number of UV's in a vertex. Adds 4B to vert size each. Always 0 on CPU
-    uint16_t    len_vertex;     // Size of one vert in bytes. Size is 12B + the above
-    uint32_t    num_vertices;   //
-    int32_t     unknown0x08;    // always -1
-    int32_t     unknown0x0c;    // always 0
-}
-
-```
 ### materials
 Very similar to already documented SRTT / IV format.
 
 ### g_model_headers
-
-Defines offset and number for verts and indices for a mesh in the big shared `.g_chunk_pc` buffers
 
 ### objects
 
@@ -316,33 +278,6 @@ struct object {
 
 Count is found in the header.
 
-Mesh movers define simple animations for objects. They're used at least for:
-
-- Doors
-- Rotating ultorball in front of their skyscraper
-- Skybox
-
-Names for movers and starts can be found a bit further: [#mesh_mover_names](.#mesh_mover_names)
-
-```yaml title="KS"
-
-seq:
-  - id: mesh_movers
-    type: mesh_mover
-    repeat: expr
-    repeat-expr: mesh_mover_count
-
-types:
-  mesh_mover:
-    seq:
-      - id: unk0
-        size: 14
-      - id: start_count
-        type: u2
-      - id: unk1
-        size: 12
-```
-
 ### unknown27
 
 Count is found in the header.
@@ -366,39 +301,7 @@ Count is found in the header.
 ### unknown32
 
 ### mesh_mover_names
-[#mesh_movers](.#mesh_movers)
 
-Just a bunch of c-strings. Nothing else.
-
-One entry contains: 
-
-- Name of the mesh mover
-- Name of each "start" in the mover.
-
-```yaml title="KS"
-
-seq:
-  - id: mesh_mover_names
-    type: mesh_mover_name(
-      mesh_movers[_index].start_count
-      )
-    repeat: expr
-    repeat-expr: mesh_mover_count
-  - type: align(16)
-
-types:
-  mesh_mover_name:
-    params:
-      - id: start_count
-        type: u2
-    seq:
-      - id: name
-        type: strz
-      - id: start_names
-        type: strz
-        repeat: expr
-        repeat-expr: start_count
-```
 ### lights
 
 !!! warning

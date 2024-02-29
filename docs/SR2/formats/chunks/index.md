@@ -3,43 +3,36 @@
     `.chunk_pc`
     `.g_chunk_pc` 
     
-## Info
+## About
 
-The .chunk_pc file internally shares a lot of formats with other files.
+!!! info "[V] Knobby said:"
+    ... The chunk_pc file is a loadable part of the world. It is what is needed for a physical chunk of the world. This includes the level geometry, level collision, sidewalk data, traffic splines, world objects, textures, etc. I say etc, but it really is probably just the tip of the iceberg. This is a massive monolithic file full of all kinds of things.
 
-<div class="grid cards" markdown>
+!!! note "File contents"
+    __Things found in chunkfiles:__
+    
+    - **Materials**  
+    Texture list, Shader params, Hashed shader names
+    - **GPU Models**  
+    Every visible model is in the g_chunk file. The format for static models is figured out.
+    - **CPU Models**  
+    The chunk_pc file itself contains models too, with no UV's or other extra data. Labeled as physmodels, since they're probably collision for loose objects.
+    - **Objects**  
+    Static world models and loose objects.
+    - **Static world collision**  
+    
+    - **Light sources**
+    - **Mesh movers**  
+    Used for doors and other simple animations.
 
- - __Things found in chunkfiles:__
-  
-    ---
-    - Materials
-    - Static Objects
-    - Object models
-    - Baked world collision
-    - Light sources
-    -   
+    __Not yet found but expected:__
+    
+      - Traffic paths, sidewalk data
+    
+    Some of this stuff could lie in the parts where the layout is already figured out. Just have to mess around with these values.
 
-- __Not yet found but expected:__
-  
-    ---
-    - Traffic paths
+The .chunk_pc file internally shares a lot of structures with other files.
 
-
-</div>
-
-## GPU Models
-Every visible model is in the g_chunk file. The format for static models is figured out.
-
-## CPU Models
-The chunk_pc file itself contains models too, with no UV's or other extra data. Labeled as physmodels, since they're probably collision for loose objects.
-
-## Objects
-For some reason the objects is split into two structs, located very far apart in the file.
-
-
-
-## World Collision
-Collision for all static objects in a chunk seem to be baked into one Havok collision blob. Look up Havok MOPP for some info from other mod scenes, though there isn't much.
 
 ## .chunk_pc Layout
 
@@ -107,7 +100,6 @@ int32_t     num_textures;               //
 uint32_t    padding[num_textures];      //
 char        texture_names[num_textures];//
 align 16                                //
-
 ```
 The objects are split into two structs, located very far apart in the file. The second part is found at [#objects](.#objects).
 Some of these transforms are left unused by objects.
